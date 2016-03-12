@@ -14,3 +14,7 @@ config/
 /log/*
 !/log/.keep
 /tmp
+
+.DS_Store
+db/.DS_Store
+app/.DS_Store

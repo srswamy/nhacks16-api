@@ -41,12 +41,13 @@ class Api::V1::UsersBooksController < ApplicationController
   end
 
   def update
-  	 selected_user_book = User.find(params[:id])
-  	 selected_user_book.name = params[:name]
-  	 selected_user_book.facebook_id = params[:facebook_id]
-  	 selected_user_book.email = params[:email]
-  	 selected_user_book_school = School.find_by(name: params[:school])
-  	 selected_user_book.school_id = selected_user_book_school.id
+  	 selected_user_book = UsersBook.find(params[:id])
+  	 selected_user_book.user_id = params[:user_id]
+     selected_book = Book.find(name: params[:book_name])
+     selected_user_book.book_id = selected_book.id
+  	 selected_user_book.status = params[:status]
+  	 selected_user_book.sent = params[:sent]
+     selected_user_book.returned = params[:returned]
   	 selected_user_book.save
   	 render :json => {:status => "success"}
   end
@@ -80,6 +81,12 @@ class Api::V1::UsersBooksController < ApplicationController
   	update_user_book.returned = params[:returned]
 
   	render :json => {:status => "success"}
+  end
+
+  def get_book_availabilities
+    book_availabilities = BookAvailability.find(params[:id])
+
+    render json: book_availabilities
   end
 
   def update_book_availability
