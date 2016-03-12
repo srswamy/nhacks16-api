@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160312083411) do
+ActiveRecord::Schema.define(version: 20160312095105) do
 
   create_table "book_availabilities", force: :cascade do |t|
     t.integer  "user_book_id",       limit: 4
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20160312083411) do
 
   create_table "rent_user_books", force: :cascade do |t|
     t.integer  "user_book_id", limit: 4
-    t.integer  "rentee_id",    limit: 4
+    t.integer  "user_id",      limit: 4
     t.datetime "start_time"
     t.datetime "end_time"
   end
@@ -47,18 +47,18 @@ ActiveRecord::Schema.define(version: 20160312083411) do
     t.datetime "updated_at",             null: false
   end
 
-  create_table "user_books", force: :cascade do |t|
-    t.integer "user_id",              limit: 4
-    t.integer "book_id",              limit: 4
-    t.boolean "status"
-    t.integer "book_availability_id", limit: 4
-  end
-
   create_table "users", force: :cascade do |t|
     t.string  "name",        limit: 255
     t.string  "facebook_id", limit: 255
     t.string  "email",       limit: 255
     t.integer "school_id",   limit: 4
+  end
+
+  create_table "users_books", force: :cascade do |t|
+    t.integer "user_id",              limit: 4
+    t.integer "book_id",              limit: 4
+    t.boolean "status"
+    t.integer "book_availability_id", limit: 4
   end
 
 end
