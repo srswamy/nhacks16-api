@@ -16,6 +16,7 @@ class Api::V1::UsersController < ApplicationController
   	new_user_school = School.find_by(name: params[:school])
   	new_user.school_id = new_user_school.id
   	new_user.save
+  	render :json => {:status => "success"}
   end
 
   def show
@@ -34,6 +35,7 @@ class Api::V1::UsersController < ApplicationController
   	 selected_user_school = School.find_by(name: params[:school])
   	 selected_user.school_id = selected_user_school.id
   	 selected_user.save
+  	 render :json => {:status => "success"}
   end
 
   def destroy
