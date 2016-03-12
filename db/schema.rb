@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160312095105) do
+ActiveRecord::Schema.define(version: 20160312170820) do
 
   create_table "book_availabilities", force: :cascade do |t|
     t.integer  "user_book_id",       limit: 4
@@ -59,6 +59,9 @@ ActiveRecord::Schema.define(version: 20160312095105) do
     t.integer "book_id",              limit: 4
     t.boolean "status"
     t.integer "book_availability_id", limit: 4
+    t.boolean "sent"
+    t.boolean "returned"
+    t.decimal "price_per_hour",                 precision: 10
   end
 
 end
