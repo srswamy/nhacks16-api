@@ -3,5 +3,5 @@ class Book < ActiveRecord::Base
 	belongs_to :category
 	has_many :users_books
 	has_many :users, :through => :users_books
-	has_many :book_availibilities, :through => :users_books
+	has_many :book_availabilities, :through => :users_books
 end
