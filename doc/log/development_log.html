@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>development.log - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="../README_rdoc.html">README</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li class="file"><a href="../app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li class="file"><a href="../config_ru.html">config.ru</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../log/development_log.html">development.log</a>
+  
+    <li class="file"><a href="../public/404_html.html">404.html</a>
+  
+    <li class="file"><a href="../public/422_html.html">422.html</a>
+  
+    <li class="file"><a href="../public/500_html.html">500.html</a>
+  
+    <li class="file"><a href="../public/favicon_ico.html">favicon.ico</a>
+  
+    <li class="file"><a href="../public/robots_txt.html">robots</a>
+  
+    <li class="file"><a href="../tmp/pids/server_pid.html">server.pid</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../ActiveRecord.html">ActiveRecord</a>
+  
+    <li><a href="../ActiveSupport.html">ActiveSupport</a>
+  
+    <li><a href="../ActiveSupport/TestCase.html">ActiveSupport::TestCase</a>
+  
+    <li><a href="../AddDateAndHoursToBookAvailabilitiesTable.html">AddDateAndHoursToBookAvailabilitiesTable</a>
+  
+    <li><a href="../AddDetailsToUsersBooks.html">AddDetailsToUsersBooks</a>
+  
+    <li><a href="../AddKarmaToUsersTable.html">AddKarmaToUsersTable</a>
+  
+    <li><a href="../Api.html">Api</a>
+  
+    <li><a href="../Api/V1.html">Api::V1</a>
+  
+    <li><a href="../Api/V1/BooksController.html">Api::V1::BooksController</a>
+  
+    <li><a href="../Api/V1/CategoriesController.html">Api::V1::CategoriesController</a>
+  
+    <li><a href="../Api/V1/SchoolsController.html">Api::V1::SchoolsController</a>
+  
+    <li><a href="../Api/V1/UsersBooksController.html">Api::V1::UsersBooksController</a>
+  
+    <li><a href="../Api/V1/UsersController.html">Api::V1::UsersController</a>
+  
+    <li><a href="../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../Book.html">Book</a>
+  
+    <li><a href="../BookAvailability.html">BookAvailability</a>
+  
+    <li><a href="../BookTest.html">BookTest</a>
+  
+    <li><a href="../Category.html">Category</a>
+  
+    <li><a href="../CategoryTest.html">CategoryTest</a>
+  
+    <li><a href="../CreateBookAvailability.html">CreateBookAvailability</a>
+  
+    <li><a href="../CreateBooks.html">CreateBooks</a>
+  
+    <li><a href="../CreateCategories.html">CreateCategories</a>
+  
+    <li><a href="../CreateRentUserBook.html">CreateRentUserBook</a>
+  
+    <li><a href="../CreateSchools.html">CreateSchools</a>
+  
+    <li><a href="../CreateUser.html">CreateUser</a>
+  
+    <li><a href="../CreateUserBook.html">CreateUserBook</a>
+  
+    <li><a href="../FixBooksUserIdColumn.html">FixBooksUserIdColumn</a>
+  
+    <li><a href="../FixRenteeIdColName.html">FixRenteeIdColName</a>
+  
+    <li><a href="../Logger.html">Logger</a>
+  
+    <li><a href="../Nhacks16Web.html">Nhacks16Web</a>
+  
+    <li><a href="../Nhacks16Web/Application.html">Nhacks16Web::Application</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../RemoveAvailabilityIdFromUsersBooksTable.html">RemoveAvailabilityIdFromUsersBooksTable</a>
+  
+    <li><a href="../RemoveDateTimesFromBookAvailabilitiesTable.html">RemoveDateTimesFromBookAvailabilitiesTable</a>
+  
+    <li><a href="../RemoveDateTimesFromBooks.html">RemoveDateTimesFromBooks</a>
+  
+    <li><a href="../RemoveDateTimesFromCategories.html">RemoveDateTimesFromCategories</a>
+  
+    <li><a href="../RemoveDateTimesFromSchools.html">RemoveDateTimesFromSchools</a>
+  
+    <li><a href="../RenameUserBooksToUsersBooks.html">RenameUserBooksToUsersBooks</a>
+  
+    <li><a href="../RentUserBook.html">RentUserBook</a>
+  
+    <li><a href="../School.html">School</a>
+  
+    <li><a href="../SchoolTest.html">SchoolTest</a>
+  
+    <li><a href="../User.html">User</a>
+  
+    <li><a href="../UsersBook.html">UsersBook</a>
+  
+    <li><a href="../UsersBookTest.html">UsersBookTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<pre>[1m[36m (28.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+[1m[35m (22.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a href="../CreateBooks.html">CreateBooks</a> (20160312074033)</p>
+
+<pre>[1m[35m (14.6ms)[0m  CREATE TABLE `books` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `category_id` int(11), `edition` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312074033&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a href="../CreateCategories.html">CreateCategories</a>
+(20160312074914)</p>
+
+<pre>[1m[35m (12.9ms)[0m  CREATE TABLE `categories` (`id` int(11) auto_increment PRIMARY KEY, `name` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312074914&#39;)
+[1m[36m (0.3ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a href="../CreateSchools.html">CreateSchools</a>
+(20160312075305)</p>
+
+<pre>[1m[35m (13.6ms)[0m  CREATE TABLE `schools` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `location` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312075305&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a href="../CreateUserBook.html">CreateUserBook</a>
+(20160312075807)</p>
+
+<pre>[1m[35m (12.9ms)[0m  CREATE TABLE `user_books` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11), `book_id` int(11), `status` tinyint(1), `book_availability_id` int(11)) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312075807&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a
+href="../CreateBookAvailability.html">CreateBookAvailability</a>
+(20160312081545)</p>
+
+<pre>[1m[35m (12.7ms)[0m  CREATE TABLE `book_availabilities` (`id` int(11) auto_increment PRIMARY KEY, `user_book_id` int(11), `start_availability` datetime, `end_availability` datetime) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312081545&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a href="../CreateRentUserBook.html">CreateRentUserBook</a>
+(20160312082334)</p>
+
+<pre>[1m[35m (14.7ms)[0m  CREATE TABLE `rent_user_books` (`id` int(11) auto_increment PRIMARY KEY, `user_book_id` int(11), `rentee_id` int(11), `start_time` datetime, `end_time` datetime) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312082334&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a href="../CreateUser.html">CreateUser</a> (20160312083411)</p>
+
+<pre>[1m[35m (10.8ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `facebook_id` varchar(255), `email` varchar(255), `school_id` int(11)) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312083411&#39;)
+[1m[36m (0.3ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a
+href="../RenameUserBooksToUsersBooks.html">RenameUserBooksToUsersBooks</a>
+(20160312092227)</p>
+
+<pre>[1m[35m (1.2ms)[0m  RENAME TABLE `user_books` TO `users_books`
+[1m[36m (0.0ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312092227&#39;)
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a href="../FixRenteeIdColName.html">FixRenteeIdColName</a>
+(20160312095105)</p>
+
+<pre>[1m[35m (14.3ms)[0m  ALTER TABLE `rent_user_books` CHANGE `rentee_id` `user_id` int(11) DEFAULT NULL
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312095105&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+[1m[36m (0.8ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;book_availabilities&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `book_availabilities`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;books&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `books`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;categories&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `categories`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;rent_user_books&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `rent_user_books`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;schools&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `schools`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users_books&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users_books`
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`name`, `email`) VALUES (&#39;NV&#39;, &#39;envybhargava26@gmail.com&#39;)
+[1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `books` (`name`, `edition`, `created_at`, `updated_at`) VALUES (&#39;Introduction to databases&#39;, 4, &#39;2016-03-12 18:06:50&#39;, &#39;2016-03-12 18:06:50&#39;)[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `users_books` (`user_id`, `book_id`) VALUES (1, 1)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35mUsersBook Load (0.3ms)[0m  SELECT `users_books`.* FROM `users_books` WHERE `users_books`.`book_id` = 1
+[1m[36m (0.2ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (2.5ms)[0m  INSERT INTO `book_availabilities` (`user_book_id`, `start_availability`) VALUES (1, &#39;2016-03-14 00:00:00&#39;)
+[1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+[1m[35mBookAvailability Load (0.6ms)[0m  SELECT `book_availabilities`.* FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`book_id` = 1</pre>
+
+<p>Mysql2::Error: Unknown column &#39;book_availabilities.users_book_id&#39;
+in &#39;on clause&#39;: SELECT `book_availabilities`.* FROM
+`book_availabilities` INNER JOIN `users_books` ON
+`book_availabilities`.`users_book_id` = `users_books`.`id` WHERE
+`users_books`.`book_id` = 1</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a
+href="../FixBooksUserIdColumn.html">FixBooksUserIdColumn</a>
+(20160312182142)</p>
+
+<pre>[1m[35m (27.4ms)[0m  ALTER TABLE `book_availabilities` CHANGE `user_book_id` `users_book_id` int(11) DEFAULT NULL
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312182142&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;book_availabilities&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `book_availabilities`
+[1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;books&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `books`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;categories&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `categories`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;rent_user_books&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `rent_user_books`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;schools&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `schools`
+[1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users_books&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users_books`
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.2ms)[0m  SELECT `books`.* FROM `books` INNER JOIN `users_books` ON `books`.`id` = `users_books`.`book_id` WHERE `users_books`.`user_id` = 1
+[1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT `book_availabilities`.* FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`book_id` = 1[0m
+[1m[35mUsersBook Load (0.4ms)[0m  SELECT `users_books`.* FROM `users_books` WHERE `users_books`.`book_id` = 1
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES (0, &#39;2016-03-12 18:26:28&#39;, &#39;2016-03-12 18:26:28&#39;)
+[1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN
+[1m[36mSQL (0.3ms)[0m  [1mUPDATE `books` SET `category_id` = 1, `updated_at` = &#39;2016-03-12 18:26:45&#39; WHERE `books`.`id` = 1[0m
+[1m[35m (1.9ms)[0m  COMMIT
+[1m[36mCategory Load (0.4ms)[0m  [1mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.3ms)[0m  SELECT `books`.* FROM `books` WHERE `books`.`category_id` = 1
+[1m[36m (0.2ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.3ms)[0m  INSERT INTO `schools` (`name`, `location`, `created_at`, `updated_at`) VALUES (&#39;University of Waterloo&#39;, &#39;Waterloo&#39;, &#39;2016-03-12 18:27:37&#39;, &#39;2016-03-12 18:27:37&#39;)
+[1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN
+[1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `school_id` = 1 WHERE `users`.`id` = 1[0m
+[1m[35m (2.0ms)[0m  COMMIT
+[1m[36mSchool Load (0.3ms)[0m  [1mSELECT  `schools`.* FROM `schools` WHERE `schools`.`id` = 1 LIMIT 1[0m
+[1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`school_id` = 1
+[1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35mRentUserBook Load (0.2ms)[0m  SELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`user_id` = 1
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a
+href="../AddDetailsToUsersBooks.html">AddDetailsToUsersBooks</a>
+(20160312170820)</p>
+
+<pre>[1m[35m (24.5ms)[0m  ALTER TABLE `users_books` ADD `sent` tinyint(1)
+[1m[36m (16.5ms)[0m  [1mALTER TABLE `users_books` ADD `returned` tinyint(1)[0m
+[1m[35m (18.9ms)[0m  ALTER TABLE `users_books` ADD `price_per_hour` decimal
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312170820&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a
+href="../AddKarmaToUsersTable.html">AddKarmaToUsersTable</a>
+(20160312194706)</p>
+
+<pre>[1m[35m (18.4ms)[0m  ALTER TABLE `users` ADD `karma` int(11)
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312194706&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;book_availabilities&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `book_availabilities`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;books&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `books`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;categories&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `categories`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;rent_user_books&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `rent_user_books`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;schools&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `schools`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users_books&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users_books`
+[1m[36mUsersBook Load (0.2ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+[1m[36mBook Load (0.3ms)[0m  [1mSELECT `books`.* FROM `books` INNER JOIN `users_books` ON `users_books`.`book_id` = `books`.`id`[0m
+[1m[35mBook Load (0.4ms)[0m  SELECT `books`.* FROM `books` INNER JOIN `users_books` ON `users_books`.`book_id` = `books`.`id`
+[1m[36mBook Load (0.5ms)[0m  [1mSELECT `books`.* FROM `books` INNER JOIN `users_books` ON `users_books`.`book_id` = `books`.`id` INNER JOIN `users_books` `users_books_books_join` ON `users_books_books_join`.`book_id` = `books`.`id` INNER JOIN `book_availabilities` ON `book_availabilities`.`users_book_id` = `users_books_books_join`.`id`[0m
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35m (0.2ms)[0m  BEGIN
+[1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`id`) VALUES (2)[0m
+[1m[35m (0.4ms)[0m  COMMIT
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `books` (`name`, `edition`, `category_id`, `created_at`, `updated_at`) VALUES (&#39;testt&#39;, 5, 1, &#39;2016-03-13 00:53:01&#39;, &#39;2016-03-13 00:53:01&#39;)
+[1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `users_books` (`user_id`, `book_id`) VALUES (2, 4)[0m
+[1m[35m (0.2ms)[0m  COMMIT
+[1m[36mBook Load (0.3ms)[0m  [1mSELECT `books`.* FROM `books` INNER JOIN `users_books` ON `books`.`id` = `users_books`.`book_id` WHERE `users_books`.`user_id` = 2 AND `books`.`id` = 4[0m
+[1m[35mUsersBook Load (0.4ms)[0m  SELECT `users_books`.* FROM `users_books` WHERE `users_books`.`user_id` = 2 AND `users_books`.`book_id` = 4
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a
+href="../RemoveDateTimesFromSchools.html">RemoveDateTimesFromSchools</a>
+(20160312181410)</p>
+
+<pre>[1m[35m (31.8ms)[0m  ALTER TABLE `schools` DROP `created_at`
+[1m[36m (20.5ms)[0m  [1mALTER TABLE `schools` DROP `updated_at`[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312181410&#39;)[0m
+[1m[35m (0.2ms)[0m  COMMIT</pre>
+
+<p>Migrating to <a
+href="../RemoveDateTimesFromCategories.html">RemoveDateTimesFromCategories</a>
+(20160312182257)</p>
+
+<pre>[1m[36m (13.6ms)[0m  [1mALTER TABLE `categories` DROP `created_at`[0m
+[1m[35m (14.0ms)[0m  ALTER TABLE `categories` DROP `updated_at`
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312182257&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a
+href="../RemoveDateTimesFromBooks.html">RemoveDateTimesFromBooks</a>
+(20160312183524)</p>
+
+<pre>[1m[35m (14.4ms)[0m  ALTER TABLE `books` DROP `created_at`
+[1m[36m (17.5ms)[0m  [1mALTER TABLE `books` DROP `updated_at`[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312183524&#39;)[0m
+[1m[35m (0.2ms)[0m  COMMIT</pre>
+
+<p>Migrating to <a
+href="../RemoveAvailabilityIdFromUsersBooksTable.html">RemoveAvailabilityIdFromUsersBooksTable</a>
+(20160313011049)</p>
+
+<pre>[1m[36m (12.3ms)[0m  [1mALTER TABLE `users_books` DROP `book_availability_id`[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160313011049&#39;)[0m
+[1m[35m (0.1ms)[0m  COMMIT
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;book_availabilities&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `book_availabilities`[0m
+[1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `books`[0m
+[1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;categories&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `categories`[0m
+[1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;rent_user_books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `rent_user_books`[0m
+[1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;schools&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `schools`[0m
+[1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users`[0m
+[1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users_books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users_books`[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a
+href="../RemoveDateTimesFromBookAvailabilitiesTable.html">RemoveDateTimesFromBookAvailabilitiesTable</a>
+(20160313014929)</p>
+
+<pre>[1m[35m (25.5ms)[0m  ALTER TABLE `book_availabilities` DROP `start_availability`
+[1m[36m (18.2ms)[0m  [1mALTER TABLE `book_availabilities` DROP `end_availability`[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160313014929&#39;)[0m
+[1m[35m (0.2ms)[0m  COMMIT
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;book_availabilities&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `book_availabilities`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `books`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;categories&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `categories`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;rent_user_books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `rent_user_books`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;schools&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `schools`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users_books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users_books`[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a
+href="../AddDateAndHoursToBookAvailabilitiesTable.html">AddDateAndHoursToBookAvailabilitiesTable</a>
+(20160313015412)</p>
+
+<pre>[1m[35m (22.4ms)[0m  ALTER TABLE `book_availabilities` ADD `date` date
+[1m[36m (15.3ms)[0m  [1mALTER TABLE `book_availabilities` ADD `hours` varchar(255)[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160313015412&#39;)[0m
+[1m[35m (0.2ms)[0m  COMMIT
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;book_availabilities&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `book_availabilities`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `books`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;categories&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `categories`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;rent_user_books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `rent_user_books`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;schools&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `schools`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users&#39;
+
+[1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `users`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users_books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users_books`[0m</pre>
+
+<p>Started GET “/” for ::1 at 2016-03-12 21:14:38 -0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Processing by Rails::WelcomeController#index as HTML</p>
+
+<pre>Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)</pre>
+
+<p>Completed 200 OK in 19ms (Views: 9.8ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/api/v1/books” for ::1 at 2016-03-12 21:14:49 -0500 Processing
+by <a
+href="../Api/V1/BooksController.html#method-i-index">Api::V1::BooksController#index</a>
+as JSON</p>
+
+<pre>[1m[35mBook Load (0.2ms)[0m  SELECT `books`.* FROM `books`</pre>
+
+<p>Completed 200 OK in 15ms (Views: 3.2ms | ActiveRecord: 1.2ms)</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
