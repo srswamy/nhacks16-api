@@ -137,4 +137,26 @@ skip_before_filter :verify_authenticity_token
   end
 
 
+  #Endpoint: /api/v1/users/:user_id/books/rent(.:format) 
+  #==Parameters:
+  #user_id -> user id of the user who is going to rent the book
+  #users_book_id -> users_book_id which is going to be used for info about the book
+  #rent_user_times -> the rent times, for example:
+  #"rent_user_times": [{date: "2012-02-02", hours: "2,4,5,7"}, {date: "2012-02-23", hours: "3,4,6,7"}]
+  def rent_this_book
+    users_book = UsersBook.find(params[:users_book_id])
+    users_book.status = false
+    users_book.save
+
+    #Add the book availabilities now
+    rent_user_times_array = JSON.parse(params[:rent_user_times])
+    rentee_id = params[:user_id]
+    rent_user_times_array.each do |rent_user_time|
+      users_book.rent_user_books.create(user_id: rentee_id, date: rent_user_time["date"].to_date, hours: rent_user_time["hours"].join(",").to_str)
+    end
+
+    render :json => {:status => "success"}
+  end
+
+
 end

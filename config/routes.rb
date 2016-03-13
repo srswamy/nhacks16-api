@@ -21,6 +21,9 @@ Rails.application.routes.draw do
         put 'updateSent', to: 'users_books#update_sent'
         put 'updateReturn', to: 'users_books#update_sent'
         put 'updateBookAvailability', to: 'users_books#update_book_availability'
+        collection do
+          post 'rent', to: 'users_book#rent_this_book'
+        end
       end
 		end
 		resources :books, except: :show do 
