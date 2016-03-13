@@ -1,4 +1,6 @@
 class Api::V1::UsersController < ApplicationController
+skip_before_filter :verify_authenticity_token
+
   def index
 	user_list = User.all
 	render json: user_list
@@ -13,8 +15,15 @@ class Api::V1::UsersController < ApplicationController
   	new_user.name = params[:name]
   	new_user.facebook_id = params[:facebook_id]
   	new_user.email = params[:email]
-  	new_user_school = School.find_by(name: params[:school])
-  	new_user.school_id = new_user_school.id
+	if School.where(:name => params[:school]).present?
+		new_user.school_id = School.find_by(name: params[:school])
+	else 
+		new_user_school = School.new
+		new_user_school.name = params[:school]
+		new_user_school.location = params[:location]
+		new_user_school.save
+		new_user.school_id = new_user_school.id
+	end
   	new_user.save
   	render :json => {:status => "success"}
   end

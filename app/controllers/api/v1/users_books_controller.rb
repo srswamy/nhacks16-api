@@ -1,4 +1,6 @@
 class Api::V1::UsersBooksController < ApplicationController
+skip_before_filter :verify_authenticity_token
+
   def index
 	users_books_list = UsersBook.all
 	render json: users_books_list
