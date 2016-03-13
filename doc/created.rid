@@ -1,20 +1,20 @@
-Sat, 12 Mar 2016 22:39:47 -0500
+Sun, 13 Mar 2016 00:34:58 -0500
 ./app/assets/javascripts/application.js	Sat, 12 Mar 2016 04:16:28 -0500
 ./app/assets/stylesheets/application.css	Sat, 12 Mar 2016 04:16:28 -0500
-./app/controllers/api/v1/books_controller.rb	Sat, 12 Mar 2016 21:30:19 -0500
+./app/controllers/api/v1/books_controller.rb	Sun, 13 Mar 2016 00:34:34 -0500
 ./app/controllers/api/v1/categories_controller.rb	Sat, 12 Mar 2016 19:53:49 -0500
 ./app/controllers/api/v1/schools_controller.rb	Sat, 12 Mar 2016 19:53:49 -0500
-./app/controllers/api/v1/users_books_controller.rb	Sat, 12 Mar 2016 19:53:49 -0500
-./app/controllers/api/v1/users_controller.rb	Sat, 12 Mar 2016 22:38:52 -0500
+./app/controllers/api/v1/users_books_controller.rb	Sat, 12 Mar 2016 23:50:03 -0500
+./app/controllers/api/v1/users_controller.rb	Sat, 12 Mar 2016 23:50:06 -0500
 ./app/controllers/application_controller.rb	Sat, 12 Mar 2016 04:16:28 -0500
 ./app/helpers/application_helper.rb	Sat, 12 Mar 2016 04:16:28 -0500
 ./app/models/book.rb	Sat, 12 Mar 2016 13:52:18 -0500
 ./app/models/book_availability.rb	Sat, 12 Mar 2016 22:18:13 -0500
 ./app/models/category.rb	Sat, 12 Mar 2016 04:45:58 -0500
-./app/models/rent_user_book.rb	Sat, 12 Mar 2016 13:52:18 -0500
+./app/models/rent_user_book.rb	Sat, 12 Mar 2016 23:50:06 -0500
 ./app/models/school.rb	Sat, 12 Mar 2016 04:46:50 -0500
-./app/models/user.rb	Sat, 12 Mar 2016 21:55:40 -0500
-./app/models/users_book.rb	Sat, 12 Mar 2016 13:52:18 -0500
+./app/models/user.rb	Sat, 12 Mar 2016 23:11:47 -0500
+./app/models/users_book.rb	Sun, 13 Mar 2016 00:18:04 -0500
 ./app/views/layouts/application.html.erb	Sat, 12 Mar 2016 04:16:28 -0500
 ./bin/bundle	Sat, 12 Mar 2016 04:16:28 -0500
 ./bin/rails	Sat, 12 Mar 2016 04:16:28 -0500
@@ -37,7 +37,7 @@ Sat, 12 Mar 2016 22:39:47 -0500
 ./config/initializers/session_store.rb	Sat, 12 Mar 2016 22:39:23 -0500
 ./config/initializers/wrap_parameters.rb	Sat, 12 Mar 2016 22:39:23 -0500
 ./config/locales/en.yml	Sat, 12 Mar 2016 22:39:23 -0500
-./config/routes.rb	Sat, 12 Mar 2016 22:39:23 -0500
+./config/routes.rb	Sun, 13 Mar 2016 00:32:42 -0500
 ./config/secrets.yml	Sat, 12 Mar 2016 22:39:23 -0500
 ./config.ru	Sat, 12 Mar 2016 04:16:28 -0500
 ./db/migrate/20160312074033_create_books.rb	Sat, 12 Mar 2016 04:16:28 -0500
@@ -59,11 +59,12 @@ Sat, 12 Mar 2016 22:39:47 -0500
 ./db/migrate/20160313011049_remove_availability_id_from_users_books_table.rb	Sat, 12 Mar 2016 21:27:35 -0500
 ./db/migrate/20160313014929_remove_date_times_from_book_availabilities_table.rb	Sat, 12 Mar 2016 21:27:35 -0500
 ./db/migrate/20160313015412_add_date_and_hours_to_book_availabilities_table.rb	Sat, 12 Mar 2016 21:27:35 -0500
-./db/schema.rb	Sat, 12 Mar 2016 21:27:52 -0500
+./db/migrate/20160313042249_change_column_name_in_rent_user_book.rb	Sat, 12 Mar 2016 23:50:06 -0500
+./db/schema.rb	Sat, 12 Mar 2016 23:50:06 -0500
 ./db/seeds.rb	Sat, 12 Mar 2016 04:16:28 -0500
 ./Gemfile	Sat, 12 Mar 2016 21:27:35 -0500
 ./Gemfile.lock	Sat, 12 Mar 2016 21:27:35 -0500
-./log/development.log	Sat, 12 Mar 2016 22:18:42 -0500
+./log/development.log	Sun, 13 Mar 2016 00:33:12 -0500
 ./public/404.html	Sat, 12 Mar 2016 04:16:28 -0500
 ./public/422.html	Sat, 12 Mar 2016 04:16:28 -0500
 ./public/500.html	Sat, 12 Mar 2016 04:16:28 -0500

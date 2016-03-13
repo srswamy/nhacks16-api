@@ -2,480 +2,2339 @@
 
 <html>
 <head>
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta charset="UTF-8">
 
 <title>development.log - RDoc Documentation</title>
-
-<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../";
 </script>
 
-<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
 
 
-<body class="file">
-<nav id="metadata">
-  <nav id="home-section" class="section">
-  <h3 class="section-header">
-    <a href="../index.html">Home</a>
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
     <a href="../table_of_contents.html#classes">Classes</a>
     <a href="../table_of_contents.html#methods">Methods</a>
-  </h3>
-</nav>
+  </div>
+</div>
 
-
-  <nav id="search-section" class="section project-section" class="initially-hidden">
+    <div id="search-section" role="search" class="project-section initially-hidden">
   <form action="#" method="get" accept-charset="utf-8">
-    <h3 class="section-header">
-      <input type="text" name="search" placeholder="Search" id="search-field"
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
              title="Type to search, Up and Down to navigate, Enter to load">
-    </h3>
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
   </form>
+</div>
 
-  <ul id="search-results" class="initially-hidden"></ul>
-</nav>
-
+  </div>
 
   
 
   <div id="project-metadata">
-    <nav id="fileindex-section" class="section project-section">
-  <h3 class="section-header">Pages</h3>
-
-  <ul>
-  
-    <li class="file"><a href="../Gemfile.html">Gemfile</a>
-  
-    <li class="file"><a href="../Gemfile_lock.html">Gemfile.lock</a>
-  
-    <li class="file"><a href="../README_rdoc.html">README</a>
-  
-    <li class="file"><a href="../Rakefile.html">Rakefile</a>
-  
-    <li class="file"><a href="../app/assets/javascripts/application_js.html">application.js</a>
-  
-    <li class="file"><a href="../app/assets/stylesheets/application_css.html">application.css</a>
-  
-    <li class="file"><a href="../config_ru.html">config.ru</a>
-  
-    <li class="file"><a href="../doc/ActiveRecord_html.html">ActiveRecord.html</a>
-  
-    <li class="file"><a href="../doc/ActiveSupport_html.html">ActiveSupport.html</a>
-  
-    <li class="file"><a href="../doc/ActiveSupport/TestCase_html.html">TestCase.html</a>
-  
-    <li class="file"><a href="../doc/AddDateAndHoursToBookAvailabilitiesTable_html.html">AddDateAndHoursToBookAvailabilitiesTable.html</a>
-  
-    <li class="file"><a href="../doc/AddDetailsToUsersBooks_html.html">AddDetailsToUsersBooks.html</a>
-  
-    <li class="file"><a href="../doc/AddKarmaToUsersTable_html.html">AddKarmaToUsersTable.html</a>
-  
-    <li class="file"><a href="../doc/Api_html.html">Api.html</a>
-  
-    <li class="file"><a href="../doc/Api/V1_html.html">V1.html</a>
-  
-    <li class="file"><a href="../doc/Api/V1/BooksController_html.html">BooksController.html</a>
-  
-    <li class="file"><a href="../doc/Api/V1/CategoriesController_html.html">CategoriesController.html</a>
-  
-    <li class="file"><a href="../doc/Api/V1/SchoolsController_html.html">SchoolsController.html</a>
-  
-    <li class="file"><a href="../doc/Api/V1/UsersBooksController_html.html">UsersBooksController.html</a>
-  
-    <li class="file"><a href="../doc/Api/V1/UsersController_html.html">UsersController.html</a>
-  
-    <li class="file"><a href="../doc/ApplicationController_html.html">ApplicationController.html</a>
-  
-    <li class="file"><a href="../doc/ApplicationHelper_html.html">ApplicationHelper.html</a>
-  
-    <li class="file"><a href="../doc/Book_html.html">Book.html</a>
-  
-    <li class="file"><a href="../doc/BookAvailability_html.html">BookAvailability.html</a>
-  
-    <li class="file"><a href="../doc/BookTest_html.html">BookTest.html</a>
-  
-    <li class="file"><a href="../doc/Category_html.html">Category.html</a>
-  
-    <li class="file"><a href="../doc/CategoryTest_html.html">CategoryTest.html</a>
-  
-    <li class="file"><a href="../doc/ChangeColumnNameInRentUserBook_html.html">ChangeColumnNameInRentUserBook.html</a>
-  
-    <li class="file"><a href="../doc/CreateBookAvailability_html.html">CreateBookAvailability.html</a>
-  
-    <li class="file"><a href="../doc/CreateBooks_html.html">CreateBooks.html</a>
-  
-    <li class="file"><a href="../doc/CreateCategories_html.html">CreateCategories.html</a>
-  
-    <li class="file"><a href="../doc/CreateRentUserBook_html.html">CreateRentUserBook.html</a>
-  
-    <li class="file"><a href="../doc/CreateSchools_html.html">CreateSchools.html</a>
-  
-    <li class="file"><a href="../doc/CreateUser_html.html">CreateUser.html</a>
-  
-    <li class="file"><a href="../doc/CreateUserBook_html.html">CreateUserBook.html</a>
-  
-    <li class="file"><a href="../doc/FixBooksUserIdColumn_html.html">FixBooksUserIdColumn.html</a>
-  
-    <li class="file"><a href="../doc/FixRenteeIdColName_html.html">FixRenteeIdColName.html</a>
-  
-    <li class="file"><a href="../doc/Gemfile_html.html">Gemfile.html</a>
-  
-    <li class="file"><a href="../doc/Gemfile_lock_html.html">Gemfile_lock.html</a>
-  
-    <li class="file"><a href="../doc/Logger_html.html">Logger.html</a>
-  
-    <li class="file"><a href="../doc/ModifyNameDataTypeInCategories_html.html">ModifyNameDataTypeInCategories.html</a>
-  
-    <li class="file"><a href="../doc/Nhacks16Web_html.html">Nhacks16Web.html</a>
-  
-    <li class="file"><a href="../doc/Nhacks16Web/Application_html.html">Application.html</a>
-  
-    <li class="file"><a href="../doc/Object_html.html">Object.html</a>
-  
-    <li class="file"><a href="../doc/README_rdoc_html.html">README_rdoc.html</a>
-  
-    <li class="file"><a href="../doc/Rakefile_html.html">Rakefile.html</a>
-  
-    <li class="file"><a href="../doc/RemoveAvailabilityIdFromUsersBooksTable_html.html">RemoveAvailabilityIdFromUsersBooksTable.html</a>
-  
-    <li class="file"><a href="../doc/RemoveDateTimesFromBookAvailabilitiesTable_html.html">RemoveDateTimesFromBookAvailabilitiesTable.html</a>
-  
-    <li class="file"><a href="../doc/RemoveDateTimesFromBooks_html.html">RemoveDateTimesFromBooks.html</a>
-  
-    <li class="file"><a href="../doc/RemoveDateTimesFromCategories_html.html">RemoveDateTimesFromCategories.html</a>
-  
-    <li class="file"><a href="../doc/RemoveDateTimesFromSchools_html.html">RemoveDateTimesFromSchools.html</a>
-  
-    <li class="file"><a href="../doc/RenameUserBooksToUsersBooks_html.html">RenameUserBooksToUsersBooks.html</a>
-  
-    <li class="file"><a href="../doc/RentUserBook_html.html">RentUserBook.html</a>
-  
-    <li class="file"><a href="../doc/School_html.html">School.html</a>
-  
-    <li class="file"><a href="../doc/SchoolTest_html.html">SchoolTest.html</a>
-  
-    <li class="file"><a href="../doc/User_html.html">User.html</a>
-  
-    <li class="file"><a href="../doc/UsersBook_html.html">UsersBook.html</a>
-  
-    <li class="file"><a href="../doc/UsersBookTest_html.html">UsersBookTest.html</a>
-  
-    <li class="file"><a href="../doc/app/assets/javascripts/application_js_html.html">application_js.html</a>
-  
-    <li class="file"><a href="../doc/app/assets/stylesheets/application_css_html.html">application_css.html</a>
-  
-    <li class="file"><a href="../doc/config_ru_html.html">config_ru.html</a>
-  
-    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
-  
-    <li class="file"><a href="../doc/css/fonts_css.html">fonts.css</a>
-  
-    <li class="file"><a href="../doc/css/rdoc_css.html">rdoc.css</a>
-  
-    <li class="file"><a href="../doc/doc/ActiveRecord_html_html.html">ActiveRecord_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/ActiveSupport/TestCase_html_html.html">TestCase_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/ActiveSupport_html_html.html">ActiveSupport_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/AddDateAndHoursToBookAvailabilitiesTable_html_html.html">AddDateAndHoursToBookAvailabilitiesTable_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/AddDetailsToUsersBooks_html_html.html">AddDetailsToUsersBooks_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/AddKarmaToUsersTable_html_html.html">AddKarmaToUsersTable_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Api/V1/BooksController_html_html.html">BooksController_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Api/V1/CategoriesController_html_html.html">CategoriesController_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Api/V1/SchoolsController_html_html.html">SchoolsController_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Api/V1/UsersBooksController_html_html.html">UsersBooksController_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Api/V1/UsersController_html_html.html">UsersController_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Api/V1_html_html.html">V1_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Api_html_html.html">Api_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/ApplicationController_html_html.html">ApplicationController_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/ApplicationHelper_html_html.html">ApplicationHelper_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/BookAvailability_html_html.html">BookAvailability_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/BookTest_html_html.html">BookTest_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Book_html_html.html">Book_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/CategoryTest_html_html.html">CategoryTest_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Category_html_html.html">Category_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/CreateBookAvailability_html_html.html">CreateBookAvailability_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/CreateBooks_html_html.html">CreateBooks_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/CreateCategories_html_html.html">CreateCategories_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/CreateRentUserBook_html_html.html">CreateRentUserBook_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/CreateSchools_html_html.html">CreateSchools_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/CreateUserBook_html_html.html">CreateUserBook_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/CreateUser_html_html.html">CreateUser_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/FixBooksUserIdColumn_html_html.html">FixBooksUserIdColumn_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/FixRenteeIdColName_html_html.html">FixRenteeIdColName_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Gemfile_html_html.html">Gemfile_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Gemfile_lock_html_html.html">Gemfile_lock_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Logger_html_html.html">Logger_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/ModifyNameDataTypeInCategories_html_html.html">ModifyNameDataTypeInCategories_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Nhacks16Web/Application_html_html.html">Application_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Nhacks16Web_html_html.html">Nhacks16Web_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Object_html_html.html">Object_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/README_rdoc_html_html.html">README_rdoc_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/Rakefile_html_html.html">Rakefile_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/RemoveAvailabilityIdFromUsersBooksTable_html_html.html">RemoveAvailabilityIdFromUsersBooksTable_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/RemoveDateTimesFromBookAvailabilitiesTable_html_html.html">RemoveDateTimesFromBookAvailabilitiesTable_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/RemoveDateTimesFromBooks_html_html.html">RemoveDateTimesFromBooks_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/RemoveDateTimesFromCategories_html_html.html">RemoveDateTimesFromCategories_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/RemoveDateTimesFromSchools_html_html.html">RemoveDateTimesFromSchools_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/RenameUserBooksToUsersBooks_html_html.html">RenameUserBooksToUsersBooks_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/RentUserBook_html_html.html">RentUserBook_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/SchoolTest_html_html.html">SchoolTest_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/School_html_html.html">School_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/User_html_html.html">User_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/UsersBookTest_html_html.html">UsersBookTest_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/UsersBook_html_html.html">UsersBook_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/app/assets/javascripts/application_js_html_html.html">application_js_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/app/assets/stylesheets/application_css_html_html.html">application_css_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/config_ru_html_html.html">config_ru_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/created_rid_html.html">created_rid.html</a>
-  
-    <li class="file"><a href="../doc/doc/css/fonts_css_html.html">fonts_css.html</a>
-  
-    <li class="file"><a href="../doc/doc/css/rdoc_css_html.html">rdoc_css.html</a>
-  
-    <li class="file"><a href="../doc/doc/doc/created_rid_html_html.html">created_rid_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/index_html_html.html">index_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/js/darkfish_js_html.html">darkfish_js.html</a>
-  
-    <li class="file"><a href="../doc/doc/js/jquery_js_html.html">jquery_js.html</a>
-  
-    <li class="file"><a href="../doc/doc/js/navigation_js_html.html">navigation_js.html</a>
-  
-    <li class="file"><a href="../doc/doc/js/search_index_js_html.html">search_index_js.html</a>
-  
-    <li class="file"><a href="../doc/doc/js/search_js_html.html">search_js.html</a>
-  
-    <li class="file"><a href="../doc/doc/js/searcher_js_html.html">searcher_js.html</a>
-  
-    <li class="file"><a href="../doc/doc/log/development_log_html_html.html">development_log_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/public/404_html_html_html.html">404_html_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/public/422_html_html_html.html">422_html_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/public/500_html_html_html.html">500_html_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/public/favicon_ico_html_html.html">favicon_ico_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/public/robots_txt_html_html.html">robots_txt_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/rdoc_css_html.html">rdoc_css.html</a>
-  
-    <li class="file"><a href="../doc/doc/table_of_contents_html_html.html">table_of_contents_html.html</a>
-  
-    <li class="file"><a href="../doc/doc/tmp/pids/server_pid_html_html.html">server_pid_html.html</a>
-  
-    <li class="file"><a href="../doc/index_html.html">index.html</a>
-  
-    <li class="file"><a href="../doc/js/darkfish_js.html">darkfish.js</a>
-  
-    <li class="file"><a href="../doc/js/jquery_js.html">jquery.js</a>
-  
-    <li class="file"><a href="../doc/js/navigation_js.html">navigation.js</a>
-  
-    <li class="file"><a href="../doc/js/search_js.html">search.js</a>
-  
-    <li class="file"><a href="../doc/js/search_index_js.html">search_index.js</a>
-  
-    <li class="file"><a href="../doc/js/searcher_js.html">searcher.js</a>
-  
-    <li class="file"><a href="../doc/log/development_log_html.html">development_log.html</a>
-  
-    <li class="file"><a href="../doc/public/404_html_html.html">404_html.html</a>
-  
-    <li class="file"><a href="../doc/public/422_html_html.html">422_html.html</a>
-  
-    <li class="file"><a href="../doc/public/500_html_html.html">500_html.html</a>
-  
-    <li class="file"><a href="../doc/public/favicon_ico_html.html">favicon_ico.html</a>
-  
-    <li class="file"><a href="../doc/public/robots_txt_html.html">robots_txt.html</a>
-  
-    <li class="file"><a href="../doc/rdoc_css.html">rdoc.css</a>
-  
-    <li class="file"><a href="../doc/table_of_contents_html.html">table_of_contents.html</a>
-  
-    <li class="file"><a href="../doc/tmp/pids/server_pid_html.html">server_pid.html</a>
-  
-    <li class="file"><a href="../log/development_log.html">development.log</a>
-  
-    <li class="file"><a href="../public/404_html.html">404.html</a>
-  
-    <li class="file"><a href="../public/422_html.html">422.html</a>
-  
-    <li class="file"><a href="../public/500_html.html">500.html</a>
-  
-    <li class="file"><a href="../public/favicon_ico.html">favicon.ico</a>
-  
-    <li class="file"><a href="../public/robots_txt.html">robots</a>
-  
-  </ul>
-</nav>
-
-    <nav id="classindex-section" class="section project-section">
-  <h3 class="section-header">Class and Module Index</h3>
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
 
   <ul class="link-list">
   
-    <li><a href="../ActiveRecord.html">ActiveRecord</a>
+    <li><a href="../Gemfile.html">Gemfile</a>
   
-    <li><a href="../ActiveSupport.html">ActiveSupport</a>
+    <li><a href="../Gemfile_lock.html">Gemfile.lock</a>
   
-    <li><a href="../ActiveSupport/TestCase.html">ActiveSupport::TestCase</a>
+    <li><a href="../README_rdoc.html">README</a>
   
-    <li><a href="../AddDateAndHoursToBookAvailabilitiesTable.html">AddDateAndHoursToBookAvailabilitiesTable</a>
+    <li><a href="../Rakefile.html">Rakefile</a>
   
-    <li><a href="../AddDetailsToUsersBooks.html">AddDetailsToUsersBooks</a>
+    <li><a href="../app/assets/javascripts/application_js.html">application.js</a>
   
-    <li><a href="../AddKarmaToUsersTable.html">AddKarmaToUsersTable</a>
+    <li><a href="../app/assets/stylesheets/application_css.html">application.css</a>
   
-    <li><a href="../Api.html">Api</a>
+    <li><a href="../config_ru.html">config.ru</a>
   
-    <li><a href="../Api/V1.html">Api::V1</a>
+    <li><a href="../log/development_log.html">development.log</a>
   
-    <li><a href="../Api/V1/BooksController.html">Api::V1::BooksController</a>
+    <li><a href="../public/404_html.html">404.html</a>
   
-    <li><a href="../Api/V1/CategoriesController.html">Api::V1::CategoriesController</a>
+    <li><a href="../public/422_html.html">422.html</a>
   
-    <li><a href="../Api/V1/SchoolsController.html">Api::V1::SchoolsController</a>
+    <li><a href="../public/500_html.html">500.html</a>
   
-    <li><a href="../Api/V1/UsersBooksController.html">Api::V1::UsersBooksController</a>
+    <li><a href="../public/favicon_ico.html">favicon.ico</a>
   
-    <li><a href="../Api/V1/UsersController.html">Api::V1::UsersController</a>
-  
-    <li><a href="../ApplicationController.html">ApplicationController</a>
-  
-    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
-  
-    <li><a href="../Book.html">Book</a>
-  
-    <li><a href="../BookAvailability.html">BookAvailability</a>
-  
-    <li><a href="../BookTest.html">BookTest</a>
-  
-    <li><a href="../Category.html">Category</a>
-  
-    <li><a href="../CategoryTest.html">CategoryTest</a>
-  
-    <li><a href="../ChangeColumnNameInRentUserBook.html">ChangeColumnNameInRentUserBook</a>
-  
-    <li><a href="../CreateBookAvailability.html">CreateBookAvailability</a>
-  
-    <li><a href="../CreateBooks.html">CreateBooks</a>
-  
-    <li><a href="../CreateCategories.html">CreateCategories</a>
-  
-    <li><a href="../CreateRentUserBook.html">CreateRentUserBook</a>
-  
-    <li><a href="../CreateSchools.html">CreateSchools</a>
-  
-    <li><a href="../CreateUser.html">CreateUser</a>
-  
-    <li><a href="../CreateUserBook.html">CreateUserBook</a>
-  
-    <li><a href="../FixBooksUserIdColumn.html">FixBooksUserIdColumn</a>
-  
-    <li><a href="../FixRenteeIdColName.html">FixRenteeIdColName</a>
-  
-    <li><a href="../Logger.html">Logger</a>
-  
-    <li><a href="../ModifyNameDataTypeInCategories.html">ModifyNameDataTypeInCategories</a>
-  
-    <li><a href="../Nhacks16Web.html">Nhacks16Web</a>
-  
-    <li><a href="../Nhacks16Web/Application.html">Nhacks16Web::Application</a>
-  
-    <li><a href="../Object.html">Object</a>
-  
-    <li><a href="../RemoveAvailabilityIdFromUsersBooksTable.html">RemoveAvailabilityIdFromUsersBooksTable</a>
-  
-    <li><a href="../RemoveDateTimesFromBookAvailabilitiesTable.html">RemoveDateTimesFromBookAvailabilitiesTable</a>
-  
-    <li><a href="../RemoveDateTimesFromBooks.html">RemoveDateTimesFromBooks</a>
-  
-    <li><a href="../RemoveDateTimesFromCategories.html">RemoveDateTimesFromCategories</a>
-  
-    <li><a href="../RemoveDateTimesFromSchools.html">RemoveDateTimesFromSchools</a>
-  
-    <li><a href="../RenameUserBooksToUsersBooks.html">RenameUserBooksToUsersBooks</a>
-  
-    <li><a href="../RentUserBook.html">RentUserBook</a>
-  
-    <li><a href="../School.html">School</a>
-  
-    <li><a href="../SchoolTest.html">SchoolTest</a>
-  
-    <li><a href="../User.html">User</a>
-  
-    <li><a href="../UsersBook.html">UsersBook</a>
-  
-    <li><a href="../UsersBookTest.html">UsersBookTest</a>
+    <li><a href="../public/robots_txt.html">robots</a>
   
   </ul>
-</nav>
+</div>
 
   </div>
 </nav>
 
-<div id="documentation" class="description">
-  
+<main role="main" aria-label="Page log/development.log">
+
+<pre>[1m[36m (28.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+[1m[35m (22.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a href="../CreateBooks.html">CreateBooks</a> (20160312074033)</p>
+
+<pre>[1m[35m (14.6ms)[0m  CREATE TABLE `books` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `category_id` int(11), `edition` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312074033&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a href="../CreateCategories.html">CreateCategories</a>
+(20160312074914)</p>
+
+<pre>[1m[35m (12.9ms)[0m  CREATE TABLE `categories` (`id` int(11) auto_increment PRIMARY KEY, `name` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312074914&#39;)
+[1m[36m (0.3ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a href="../CreateSchools.html">CreateSchools</a>
+(20160312075305)</p>
+
+<pre>[1m[35m (13.6ms)[0m  CREATE TABLE `schools` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `location` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312075305&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a href="../CreateUserBook.html">CreateUserBook</a>
+(20160312075807)</p>
+
+<pre>[1m[35m (12.9ms)[0m  CREATE TABLE `user_books` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11), `book_id` int(11), `status` tinyint(1), `book_availability_id` int(11)) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312075807&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a
+href="../CreateBookAvailability.html">CreateBookAvailability</a>
+(20160312081545)</p>
+
+<pre>[1m[35m (12.7ms)[0m  CREATE TABLE `book_availabilities` (`id` int(11) auto_increment PRIMARY KEY, `user_book_id` int(11), `start_availability` datetime, `end_availability` datetime) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312081545&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a href="../CreateRentUserBook.html">CreateRentUserBook</a>
+(20160312082334)</p>
+
+<pre>[1m[35m (14.7ms)[0m  CREATE TABLE `rent_user_books` (`id` int(11) auto_increment PRIMARY KEY, `user_book_id` int(11), `rentee_id` int(11), `start_time` datetime, `end_time` datetime) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312082334&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a href="../CreateUser.html">CreateUser</a> (20160312083411)</p>
+
+<pre>[1m[35m (10.8ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `facebook_id` varchar(255), `email` varchar(255), `school_id` int(11)) ENGINE=InnoDB
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312083411&#39;)
+[1m[36m (0.3ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a
+href="../RenameUserBooksToUsersBooks.html">RenameUserBooksToUsersBooks</a>
+(20160312092227)</p>
+
+<pre>[1m[35m (1.2ms)[0m  RENAME TABLE `user_books` TO `users_books`
+[1m[36m (0.0ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312092227&#39;)
+[1m[36m (0.1ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a href="../FixRenteeIdColName.html">FixRenteeIdColName</a>
+(20160312095105)</p>
+
+<pre>[1m[35m (14.3ms)[0m  ALTER TABLE `rent_user_books` CHANGE `rentee_id` `user_id` int(11) DEFAULT NULL
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312095105&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+[1m[36m (0.8ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;book_availabilities&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `book_availabilities`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `books`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;categories&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `categories`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;rent_user_books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `rent_user_books`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;schools&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `schools`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;users&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;users_books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users_books`
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`name`, `email`) VALUES (&#39;NV&#39;, &#39;envybhargava26@gmail.com&#39;)
+[1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `books` (`name`, `edition`, `created_at`, `updated_at`) VALUES (&#39;Introduction to databases&#39;, 4, &#39;2016-03-12 18:06:50&#39;, &#39;2016-03-12 18:06:50&#39;)[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `users_books` (`user_id`, `book_id`) VALUES (1, 1)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35mUsersBook Load (0.3ms)[0m  SELECT `users_books`.* FROM `users_books` WHERE `users_books`.`book_id` = 1
+[1m[36m (0.2ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (2.5ms)[0m  INSERT INTO `book_availabilities` (`user_book_id`, `start_availability`) VALUES (1, &#39;2016-03-14 00:00:00&#39;)
+[1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+[1m[35mBookAvailability Load (0.6ms)[0m  SELECT `book_availabilities`.* FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`book_id` = 1</pre>
+
+<p>Mysql2::Error: Unknown column &#39;book_availabilities.users_book_id&#39;
+in &#39;on clause&#39;: SELECT `book_availabilities`.* FROM
+`book_availabilities` INNER JOIN `users_books` ON
+`book_availabilities`.`users_book_id` = `users_books`.`id` WHERE
+`users_books`.`book_id` = 1</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a
+href="../FixBooksUserIdColumn.html">FixBooksUserIdColumn</a>
+(20160312182142)</p>
+
+<pre>[1m[35m (27.4ms)[0m  ALTER TABLE `book_availabilities` CHANGE `user_book_id` `users_book_id` int(11) DEFAULT NULL
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312182142&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;book_availabilities&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `book_availabilities`
+[1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `books`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;categories&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `categories`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;rent_user_books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `rent_user_books`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;schools&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `schools`
+[1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;users&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;users_books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users_books`
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.2ms)[0m  SELECT `books`.* FROM `books` INNER JOIN `users_books` ON `books`.`id` = `users_books`.`book_id` WHERE `users_books`.`user_id` = 1
+[1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT `book_availabilities`.* FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`book_id` = 1[0m
+[1m[35mUsersBook Load (0.4ms)[0m  SELECT `users_books`.* FROM `users_books` WHERE `users_books`.`book_id` = 1
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES (0, &#39;2016-03-12 18:26:28&#39;, &#39;2016-03-12 18:26:28&#39;)
+[1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN
+[1m[36mSQL (0.3ms)[0m  [1mUPDATE `books` SET `category_id` = 1, `updated_at` = &#39;2016-03-12 18:26:45&#39; WHERE `books`.`id` = 1[0m
+[1m[35m (1.9ms)[0m  COMMIT
+[1m[36mCategory Load (0.4ms)[0m  [1mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.3ms)[0m  SELECT `books`.* FROM `books` WHERE `books`.`category_id` = 1
+[1m[36m (0.2ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.3ms)[0m  INSERT INTO `schools` (`name`, `location`, `created_at`, `updated_at`) VALUES (&#39;University of Waterloo&#39;, &#39;Waterloo&#39;, &#39;2016-03-12 18:27:37&#39;, &#39;2016-03-12 18:27:37&#39;)
+[1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+[1m[35m (0.2ms)[0m  BEGIN
+[1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `school_id` = 1 WHERE `users`.`id` = 1[0m
+[1m[35m (2.0ms)[0m  COMMIT
+[1m[36mSchool Load (0.3ms)[0m  [1mSELECT  `schools`.* FROM `schools` WHERE `schools`.`id` = 1 LIMIT 1[0m
+[1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`school_id` = 1
+[1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35mRentUserBook Load (0.2ms)[0m  SELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`user_id` = 1
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a
+href="../AddDetailsToUsersBooks.html">AddDetailsToUsersBooks</a>
+(20160312170820)</p>
+
+<pre>[1m[35m (24.5ms)[0m  ALTER TABLE `users_books` ADD `sent` tinyint(1)
+[1m[36m (16.5ms)[0m  [1mALTER TABLE `users_books` ADD `returned` tinyint(1)[0m
+[1m[35m (18.9ms)[0m  ALTER TABLE `users_books` ADD `price_per_hour` decimal
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312170820&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a
+href="../AddKarmaToUsersTable.html">AddKarmaToUsersTable</a>
+(20160312194706)</p>
+
+<pre>[1m[35m (18.4ms)[0m  ALTER TABLE `users` ADD `karma` int(11)
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312194706&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;book_availabilities&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `book_availabilities`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `books`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;categories&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `categories`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;rent_user_books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `rent_user_books`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;schools&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `schools`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;users&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;users_books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users_books`
+[1m[36mUsersBook Load (0.2ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+[1m[36mBook Load (0.3ms)[0m  [1mSELECT `books`.* FROM `books` INNER JOIN `users_books` ON `users_books`.`book_id` = `books`.`id`[0m
+[1m[35mBook Load (0.4ms)[0m  SELECT `books`.* FROM `books` INNER JOIN `users_books` ON `users_books`.`book_id` = `books`.`id`
+[1m[36mBook Load (0.5ms)[0m  [1mSELECT `books`.* FROM `books` INNER JOIN `users_books` ON `users_books`.`book_id` = `books`.`id` INNER JOIN `users_books` `users_books_books_join` ON `users_books_books_join`.`book_id` = `books`.`id` INNER JOIN `book_availabilities` ON `book_availabilities`.`users_book_id` = `users_books_books_join`.`id`[0m
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35m (0.2ms)[0m  BEGIN
+[1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`id`) VALUES (2)[0m
+[1m[35m (0.4ms)[0m  COMMIT
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.2ms)[0m  INSERT INTO `books` (`name`, `edition`, `category_id`, `created_at`, `updated_at`) VALUES (&#39;testt&#39;, 5, 1, &#39;2016-03-13 00:53:01&#39;, &#39;2016-03-13 00:53:01&#39;)
+[1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `users_books` (`user_id`, `book_id`) VALUES (2, 4)[0m
+[1m[35m (0.2ms)[0m  COMMIT
+[1m[36mBook Load (0.3ms)[0m  [1mSELECT `books`.* FROM `books` INNER JOIN `users_books` ON `books`.`id` = `users_books`.`book_id` WHERE `users_books`.`user_id` = 2 AND `books`.`id` = 4[0m
+[1m[35mUsersBook Load (0.4ms)[0m  SELECT `users_books`.* FROM `users_books` WHERE `users_books`.`user_id` = 2 AND `users_books`.`book_id` = 4
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a
+href="../RemoveDateTimesFromSchools.html">RemoveDateTimesFromSchools</a>
+(20160312181410)</p>
+
+<pre>[1m[35m (31.8ms)[0m  ALTER TABLE `schools` DROP `created_at`
+[1m[36m (20.5ms)[0m  [1mALTER TABLE `schools` DROP `updated_at`[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312181410&#39;)[0m
+[1m[35m (0.2ms)[0m  COMMIT</pre>
+
+<p>Migrating to <a
+href="../RemoveDateTimesFromCategories.html">RemoveDateTimesFromCategories</a>
+(20160312182257)</p>
+
+<pre>[1m[36m (13.6ms)[0m  [1mALTER TABLE `categories` DROP `created_at`[0m
+[1m[35m (14.0ms)[0m  ALTER TABLE `categories` DROP `updated_at`
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312182257&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
+
+<p>Migrating to <a
+href="../RemoveDateTimesFromBooks.html">RemoveDateTimesFromBooks</a>
+(20160312183524)</p>
+
+<pre>[1m[35m (14.4ms)[0m  ALTER TABLE `books` DROP `created_at`
+[1m[36m (17.5ms)[0m  [1mALTER TABLE `books` DROP `updated_at`[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160312183524&#39;)[0m
+[1m[35m (0.2ms)[0m  COMMIT</pre>
+
+<p>Migrating to <a
+href="../RemoveAvailabilityIdFromUsersBooksTable.html">RemoveAvailabilityIdFromUsersBooksTable</a>
+(20160313011049)</p>
+
+<pre>[1m[36m (12.3ms)[0m  [1mALTER TABLE `users_books` DROP `book_availability_id`[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160313011049&#39;)[0m
+[1m[35m (0.1ms)[0m  COMMIT
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;book_availabilities&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `book_availabilities`[0m
+[1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `books`[0m
+[1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;categories&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `categories`[0m
+[1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;rent_user_books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `rent_user_books`[0m
+[1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;schools&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `schools`[0m
+[1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users`[0m
+[1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users_books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users_books`[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a
+href="../RemoveDateTimesFromBookAvailabilitiesTable.html">RemoveDateTimesFromBookAvailabilitiesTable</a>
+(20160313014929)</p>
+
+<pre>[1m[35m (25.5ms)[0m  ALTER TABLE `book_availabilities` DROP `start_availability`
+[1m[36m (18.2ms)[0m  [1mALTER TABLE `book_availabilities` DROP `end_availability`[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160313014929&#39;)[0m
+[1m[35m (0.2ms)[0m  COMMIT
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;book_availabilities&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `book_availabilities`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `books`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;categories&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `categories`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;rent_user_books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `rent_user_books`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;schools&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `schools`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users_books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users_books`[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a
+href="../AddDateAndHoursToBookAvailabilitiesTable.html">AddDateAndHoursToBookAvailabilitiesTable</a>
+(20160313015412)</p>
+
+<pre>[1m[35m (22.4ms)[0m  ALTER TABLE `book_availabilities` ADD `date` date
+[1m[36m (15.3ms)[0m  [1mALTER TABLE `book_availabilities` ADD `hours` varchar(255)[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160313015412&#39;)[0m
+[1m[35m (0.2ms)[0m  COMMIT
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;book_availabilities&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `book_availabilities`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `books`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;categories&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `categories`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;rent_user_books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `rent_user_books`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;schools&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `schools`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users&#39;
+
+[1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `users`[0m
+[1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre>AND fk.table_schema = &#39;nhacks16&#39;
+AND fk.table_name = &#39;users_books&#39;
+
+[1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users_books`[0m</pre>
+
+<p>Started GET “/” for ::1 at 2016-03-12 21:14:38 -0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Processing by Rails::WelcomeController#index as HTML</p>
+
+<pre>Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)</pre>
+
+<p>Completed 200 OK in 19ms (Views: 9.8ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/api/v1/books” for ::1 at 2016-03-12 21:14:49 -0500 Processing
+by <a
+href="../Api/V1/BooksController.html#method-i-index">Api::V1::BooksController#index</a>
+as JSON</p>
+
+<pre>[1m[35mBook Load (0.2ms)[0m  SELECT `books`.* FROM `books`</pre>
+
+<p>Completed 200 OK in 15ms (Views: 3.2ms | ActiveRecord: 1.2ms)</p>
+
+<p>Started GET “/doc” for ::1 at 2016-03-12 21:20:47 -0500</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/doc”):</p>
+
+<pre>actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.4) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.4) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (91.1ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (101.1ms)</pre>
+
+<p>Started GET “/doc/api/v1/BooksController.html” for ::1 at 2016-03-12
+21:21:08 -0500</p>
+
+<p>ActionController::RoutingError (No route matches [GET]
+“/doc/api/v1/BooksController.html”):</p>
+
+<pre>actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.4) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.4) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (68.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.7ms)</pre>
+
+<p>Started GET “/doc/Api/V1/BooksController.html” for ::1 at 2016-03-12
+21:21:18 -0500</p>
+
+<p>ActionController::RoutingError (No route matches [GET]
+“/doc/Api/V1/BooksController.html”):</p>
+
+<pre>actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.4) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.4) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (95.1ms)
+[1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35mBookAvailability Load (0.2ms)[0m  SELECT `book_availabilities`.* FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1
+[1m[36mBookAvailability Load (0.4ms)[0m  [1mSELECT `book_availabilities`.`id` FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1[0m
+[1m[35mBookAvailability Load (1.0ms)[0m  SELECT id, users_books.status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1</pre>
+
+<p>Mysql2::Error: Column &#39;id&#39; in field list is ambiguous: SELECT id,
+users_books.status FROM `book_availabilities` INNER JOIN `users_books` ON
+`book_availabilities`.`users_book_id` = `users_books`.`id` WHERE
+`users_books`.`user_id` = 1</p>
+
+<pre>[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35mBookAvailability Load (0.5ms)[0m  SELECT users.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1</pre>
+
+<p>Mysql2::Error: Unknown table &#39;users&#39;: SELECT users.*,
+users_books.status as current_status FROM `book_availabilities` INNER JOIN
+`users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id`
+WHERE `users_books`.`user_id` = 1</p>
+
+<pre>[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35mBookAvailability Load (0.4ms)[0m  SELECT book_availabilities.*, book_availabilities.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1</pre>
+
+<p>Mysql2::Error: Unknown column &#39;book_availabilities.status&#39; in
+&#39;field list&#39;: SELECT book_availabilities.*,
+book_availabilities.status as current_status FROM `book_availabilities`
+INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` =
+`users_books`.`id` WHERE `users_books`.`user_id` = 1</p>
+
+<pre>[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35mBookAvailability Load (0.2ms)[0m  SELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35mBookAvailability Load (0.2ms)[0m  SELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1
+[1m[36mBookAvailability Load (0.3ms)[0m  [1mSELECT  `book_availabilities`.* FROM `book_availabilities` WHERE `book_availabilities`.`id` = 1 LIMIT 1[0m
+[1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT  `book_availabilities`.* FROM `book_availabilities` WHERE `book_availabilities`.`id` = 1 LIMIT 1[0m
+[1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT  `book_availabilities`.* FROM `book_availabilities` WHERE `book_availabilities`.`id` = 1 LIMIT 1[0m
+[1m[35mUsersBook Load (0.2ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1
+[1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT  `book_availabilities`.* FROM `book_availabilities` WHERE `book_availabilities`.`id` = 1 LIMIT 1[0m
+[1m[35mUsersBook Load (0.2ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1
+[1m[36mBookAvailability Load (0.3ms)[0m  [1mSELECT  `book_availabilities`.* FROM `book_availabilities` WHERE `book_availabilities`.`id` = 1 LIMIT 1[0m
+[1m[35mUsersBook Load (0.2ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1
+[1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m</pre>
+
+<p>Started GET “/api/v1/users/lent_books?facebook_id=10” for ::1 at 2016-03-12
+22:46:24 -0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>ActiveRecord::PendingMigrationError (</p>
+
+<p>Migrations are pending. To resolve this issue, run:</p>
+
+<pre>bin/rake db:migrate RAILS_ENV=development</pre>
+
+<p>):</p>
+
+<pre>activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!&#39;
+activerecord (4.2.4) lib/active_record/migration.rb:373:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call&#39;
+activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__&#39;
+activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks&#39;
+activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.4) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.4) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.6ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (119.7ms)
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a
+href="../ModifyNameDataTypeInCategories.html">ModifyNameDataTypeInCategories</a>
+(20160313010430)</p>
+
+<pre>[1m[35m (25.0ms)[0m  ALTER TABLE `categories` CHANGE `name` `name` varchar(255) DEFAULT NULL
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160313010430&#39;)
+[1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+[1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;book_availabilities&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `book_availabilities`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `books`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;categories&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `categories`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;rent_user_books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `rent_user_books`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;schools&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `schools`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;users&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;users_books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users_books`</pre>
+
+<p>Started GET “/api/v1/users/lent_books?facebook_id=10” for ::1 at 2016-03-12
+22:46:45 -0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Processing by <a
+href="../Api/V1/UsersController.html#method-i-show">Api::V1::UsersController#show</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;facebook_id&quot;=&gt;&quot;10&quot;, &quot;id&quot;=&gt;&quot;lent_books&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1</pre>
+
+<p>Completed 404 Not Found in 24ms (ActiveRecord: 1.4ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../User.html">User</a> with &#39;id&#39;=lent_books):</p>
+
+<pre>app/controllers/api/v1/users_controller.rb:32:in `show&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.9ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (99.9ms)</pre>
+
+<p>Started GET “/api/v1/users/10/lent_book” for ::1 at 2016-03-12 22:48:37
+-0500</p>
+
+<p>ActionController::RoutingError (No route matches [GET]
+“/api/v1/users/10/lent_book”):</p>
+
+<pre>actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.4) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.4) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.5ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (89.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.8ms)</pre>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:48:48
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}</pre>
+
+<p>Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>NoMethodError (undefined method `findBy&#39; for
+#&lt;Class:0x007ff52b65c250&gt;):</p>
+
+<pre>app/controllers/api/v1/users_controller.rb:65:in `get_lent_books&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.6ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (95.9ms)</pre>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:49:33
+-0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` IS NULL LIMIT 1
+[1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 2[0m</pre>
+
+<p>Completed 200 OK in 50ms (Views: 0.2ms | ActiveRecord: 5.5ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:49:35
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` IS NULL LIMIT 1
+[1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 2[0m</pre>
+
+<p>Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:50:45
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` IS NULL LIMIT 1
+[1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 2[0m</pre>
+
+<p>Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 4.8ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:50:54
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` IS NULL LIMIT 1
+[1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 2[0m</pre>
+
+<p>Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 5.7ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:51:14
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` IS NULL LIMIT 1
+[1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 2[0m</pre>
+
+<p>Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 5.0ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:51:53
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1
+[1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1[0m
+[1m[35mUsersBook Load (0.2ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1
+[1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m</pre>
+
+<p>Completed 500 Internal Server Error in 43ms (ActiveRecord: 6.8ms)</p>
+
+<p>NoMethodError (undefined method `current_status=&#39; for {}:Hash):</p>
+
+<pre>app/controllers/api/v1/users_controller.rb:72:in `block in get_lent_books&#39;
+app/controllers/api/v1/users_controller.rb:68:in `get_lent_books&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.1ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (51.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (104.2ms)</pre>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:52:09
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1</pre>
+
+<p>Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 3.5ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:52:21
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1[0m
+[1m[35mBookAvailability Load (0.2ms)[0m  SELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1</pre>
+
+<p>Completed 200 OK in 27ms (Views: 2.4ms | ActiveRecord: 5.5ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:53:11
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1[0m
+[1m[35mBookAvailability Load (0.2ms)[0m  SELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1</pre>
+
+<p>Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 6.1ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:53:39
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1[0m
+[1m[35mBookAvailability Load (0.2ms)[0m  SELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1</pre>
+
+<p>Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 6.0ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:53:43
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1[0m
+[1m[35mBookAvailability Load (0.2ms)[0m  SELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1
+[1m[36mUsersBook Load (0.2ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+[1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35mCACHE (0.0ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1  [[&quot;id&quot;, 1]]
+[1m[36mUsersBook Load (0.1ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 2 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1</pre>
+
+<p>Completed 200 OK in 38ms (Views: 0.4ms | ActiveRecord: 7.0ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:53:50
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[36mUser Load (0.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1[0m
+[1m[35mBookAvailability Load (0.2ms)[0m  SELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1
+[1m[36mUsersBook Load (0.2ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1</pre>
+
+<p>Completed 500 Internal Server Error in 35ms (ActiveRecord: 6.7ms)</p>
+
+<p>NoMethodError (undefined method `current_status=&#39; for {}:Hash):</p>
+
+<pre>app/controllers/api/v1/users_controller.rb:72:in `block in get_lent_books&#39;
+app/controllers/api/v1/users_controller.rb:68:in `get_lent_books&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.1ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.4ms)</pre>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:54:18
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1[0m
+[1m[35mBookAvailability Load (0.3ms)[0m  SELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1
+[1m[36mUsersBook Load (0.2ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+[1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35mCACHE (0.0ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1  [[&quot;id&quot;, 1]]
+[1m[36mUsersBook Load (0.1ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 2 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1</pre>
+
+<p>Completed 200 OK in 44ms (Views: 0.3ms | ActiveRecord: 7.7ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:54:29
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1[0m
+[1m[35mBookAvailability Load (0.2ms)[0m  SELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1
+[1m[36mUsersBook Load (0.1ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+[1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35mCACHE (0.0ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1  [[&quot;id&quot;, 1]]
+[1m[36mUsersBook Load (0.1ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 2 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1</pre>
+
+<p>Completed 200 OK in 34ms (Views: 0.4ms | ActiveRecord: 7.1ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:54:32
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1[0m
+[1m[35mBookAvailability Load (0.2ms)[0m  SELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1
+[1m[36mUsersBook Load (0.1ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+[1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35mCACHE (0.0ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1  [[&quot;id&quot;, 1]]
+[1m[36mUsersBook Load (0.1ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 2 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1</pre>
+
+<p>Completed 200 OK in 40ms (Views: 0.4ms | ActiveRecord: 8.1ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:54:37
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1[0m
+[1m[35mBookAvailability Load (0.2ms)[0m  SELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1
+[1m[36mUsersBook Load (0.1ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+[1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35mCACHE (0.0ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1  [[&quot;id&quot;, 1]]
+[1m[36mUsersBook Load (0.2ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 2 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1</pre>
+
+<p>Completed 200 OK in 39ms (Views: 0.4ms | ActiveRecord: 6.8ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 22:54:54
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1[0m
+[1m[35mBookAvailability Load (0.2ms)[0m  SELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1
+[1m[36mUsersBook Load (0.1ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+[1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35mCACHE (0.0ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1  [[&quot;id&quot;, 1]]
+[1m[36mUsersBook Load (0.1ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 2 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1</pre>
+
+<p>Completed 200 OK in 34ms (Views: 0.2ms | ActiveRecord: 7.7ms)</p>
+
+<p>Started GET “/api/v1/users/10/borrowed” for ::1 at 2016-03-12 23:14:41
+-0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>ActionController::RoutingError (No route matches [GET]
+“/api/v1/users/10/borrowed”):</p>
+
+<pre>actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.4) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.4) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.6ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.5ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.5ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (110.1ms)</pre>
+
+<p>Started GET “/api/v1/users/10/borrowed” for ::1 at 2016-03-12 23:15:06
+-0500</p>
+
+<p>ActionController::RoutingError (No route matches [GET]
+“/api/v1/users/10/borrowed”):</p>
+
+<pre>actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.4) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.4) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (74.9ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.5ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.1ms)</pre>
+
+<p>Started GET “/api/v1/users/10/borrowed” for ::1 at 2016-03-12 23:15:15
+-0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>ActionController::RoutingError (No route matches [GET]
+“/api/v1/users/10/borrowed”):</p>
+
+<pre>actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.4) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.4) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (83.6ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.7ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.7ms)</pre>
+
+<p>Started GET “/api/v1/users/10/borrowers” for ::1 at 2016-03-12 23:15:33
+-0500</p>
+
+<p>AbstractController::ActionNotFound (The action &#39;borrowers&#39; could
+not be found for <a
+href="../Api/V1/UsersController.html">Api::V1::UsersController</a>):</p>
+
+<pre>actionpack (4.2.4) lib/abstract_controller/base.rb:132:in `process&#39;
+actionview (4.2.4) lib/action_view/rendering.rb:30:in `process&#39;
+actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch&#39;
+actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch&#39;
+actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action&#39;
+actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch&#39;
+actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve&#39;
+actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve&#39;
+actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each&#39;
+actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve&#39;
+actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call&#39;
+rack (1.6.4) lib/rack/etag.rb:24:in `call&#39;
+rack (1.6.4) lib/rack/conditionalget.rb:25:in `call&#39;
+rack (1.6.4) lib/rack/head.rb:13:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call&#39;
+rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context&#39;
+rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call&#39;
+activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call&#39;
+activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call&#39;
+activerecord (4.2.4) lib/active_record/migration.rb:377:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call&#39;
+activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__&#39;
+activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks&#39;
+activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.4) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.4) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.7ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (91.2ms)</pre>
+
+<p>Started GET “/api/v1/users/10/borrowers” for ::1 at 2016-03-12 23:16:01
+-0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>ActionController::RoutingError (No route matches [GET]
+“/api/v1/users/10/borrowers”):</p>
+
+<pre>actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.4) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.4) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.4) lib/rails/application.rb:165:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.5ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (80.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.9ms)</pre>
+
+<p>Started GET “/api/v1/users/10/borrowed” for ::1 at 2016-03-12 23:16:07
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-borrowed">Api::V1::UsersController#borrowed</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1
+[1m[36mRentUserBook Load (0.1ms)[0m  [1mSELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`user_id` = 1[0m</pre>
+
+<p>Completed 200 OK in 33ms (Views: 0.2ms | ActiveRecord: 2.7ms)</p>
+
+<p>Started GET “/api/v1/users/10/borrowed” for ::1 at 2016-03-12 23:17:05
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-borrowed">Api::V1::UsersController#borrowed</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1
+[1m[36mRentUserBook Load (0.2ms)[0m  [1mSELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`user_id` = 1[0m</pre>
+
+<p>Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.5ms)</p>
+
+<p>Started GET “/api/v1/users/10/borrowed” for ::1 at 2016-03-12 23:17:34
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-borrowed">Api::V1::UsersController#borrowed</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1
+[1m[36mRentUserBook Load (0.2ms)[0m  [1mSELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`user_id` = 1[0m</pre>
+
+<p>Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.1ms)</p>
+
+<p>JSON::GeneratorError (only generation of JSON objects or arrays allowed):</p>
+
+<pre>app/controllers/api/v1/users_controller.rb:91:in `borrowed&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.0ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.5ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.4ms)</pre>
+
+<p>Started GET “/api/v1/users/10/borrowed” for ::1 at 2016-03-12 23:17:44
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-borrowed">Api::V1::UsersController#borrowed</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1
+[1m[36mRentUserBook Load (0.2ms)[0m  [1mSELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`user_id` = 1[0m</pre>
+
+<p>Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 4.4ms)</p>
+
+<pre>[1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35mRentUserBook Load (0.2ms)[0m  SELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`user_id` = 1
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a
+href="../ChangeColumnNameInRentUserBook.html">ChangeColumnNameInRentUserBook</a>
+(20160313042249)</p>
+
+<pre>[1m[35m (23.7ms)[0m  ALTER TABLE `rent_user_books` CHANGE `user_book_id` `users_book_id` int(11) DEFAULT NULL
+[1m[36m (0.0ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160313042249&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;book_availabilities&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `book_availabilities`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `books`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;categories&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `categories`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;rent_user_books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `rent_user_books`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;schools&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `schools`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;users&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;users_books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users_books`
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35mRentUserBook Load (0.1ms)[0m  SELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`user_id` = 1
+[1m[36mUsersBook Load (0.2ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1</pre>
+
+<p>Started GET “/api/v1/users/10/borrowed” for ::1 at 2016-03-12 23:27:42
+-0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Processing by <a
+href="../Api/V1/UsersController.html#method-i-borrowed">Api::V1::UsersController#borrowed</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1
+[1m[36mRentUserBook Load (0.1ms)[0m  [1mSELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`user_id` = 1[0m
+[1m[35mUsersBook Load (0.1ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1
+[1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m</pre>
+
+<p>Completed 200 OK in 53ms (Views: 0.3ms | ActiveRecord: 6.9ms)</p>
+
+<p>Started GET “/api/v1/users/10/borrowed” for ::1 at 2016-03-12 23:31:56
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-borrowed">Api::V1::UsersController#borrowed</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1
+[1m[36mRentUserBook Load (0.2ms)[0m  [1mSELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`user_id` = 1[0m
+[1m[35mUsersBook Load (0.2ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1
+[1m[36mBook Load (0.1ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m</pre>
+
+<p>Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 7.5ms)</p>
+
+<p>Started GET “/api/v1/users/10/borrowed” for ::1 at 2016-03-12 23:32:07
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-borrowed">Api::V1::UsersController#borrowed</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1
+[1m[36mRentUserBook Load (0.2ms)[0m  [1mSELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`user_id` = 1[0m
+[1m[35mUsersBook Load (0.1ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1
+[1m[36mBook Load (0.1ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m</pre>
+
+<p>Completed 200 OK in 35ms (Views: 0.3ms | ActiveRecord: 7.0ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 23:32:21
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1
+[1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1[0m
+[1m[35mUsersBook Load (0.2ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1
+[1m[36mBook Load (0.1ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+[1m[35mCACHE (0.0ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1  [[&quot;id&quot;, 1]]
+[1m[36mCACHE (0.0ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35mUsersBook Load (0.2ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 2 LIMIT 1
+[1m[36mBook Load (0.1ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1[0m</pre>
+
+<p>Completed 200 OK in 55ms (Views: 0.2ms | ActiveRecord: 7.7ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 23:32:26
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`facebook_id` = &#39;10&#39; LIMIT 1
+[1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1[0m
+[1m[35mUsersBook Load (0.1ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1
+[1m[36mBook Load (0.1ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+[1m[35mCACHE (0.0ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1  [[&quot;id&quot;, 1]]
+[1m[36mCACHE (0.0ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35mUsersBook Load (0.1ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 2 LIMIT 1
+[1m[36mBook Load (0.1ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1[0m</pre>
+
+<p>Completed 200 OK in 35ms (Views: 0.5ms | ActiveRecord: 6.9ms)</p>
+
+<p>Started GET “/api/v1/users/10/lent_books” for ::1 at 2016-03-12 23:42:56
+-0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;10&quot;}
+[1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1</pre>
+
+<p>Completed 404 Not Found in 25ms (ActiveRecord: 1.5ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../User.html">User</a> with &#39;id&#39;=10):</p>
+
+<pre>app/controllers/api/v1/users_controller.rb:65:in `get_lent_books&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (55.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (118.7ms)</pre>
+
+<p>Started GET “/api/v1/users/1/lent_books” for ::1 at 2016-03-12 23:43:03
+-0500 Processing by <a
+href="../Api/V1/UsersController.html#method-i-get_lent_books">Api::V1::UsersController#get_lent_books</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;1&quot;}
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35mBookAvailability Load (0.2ms)[0m  SELECT book_availabilities.*, users_books.status as current_status FROM `book_availabilities` INNER JOIN `users_books` ON `book_availabilities`.`users_book_id` = `users_books`.`id` WHERE `users_books`.`user_id` = 1
+[1m[36mUsersBook Load (0.2ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+[1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m  [[&quot;id&quot;, 1]]
+[1m[35mCACHE (0.0ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1  [[&quot;id&quot;, 1]]
+[1m[36mUsersBook Load (0.1ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 2 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1</pre>
+
+<p>Completed 200 OK in 62ms (Views: 0.4ms | ActiveRecord: 4.1ms)</p>
+
+<p>Started GET “/api/v1/users/1/borrowed” for ::1 at 2016-03-12 23:43:07 -0500
+Processing by <a
+href="../Api/V1/UsersController.html#method-i-borrowed">Api::V1::UsersController#borrowed</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;user_id&quot;=&gt;&quot;1&quot;}
+[1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[1m[35mRentUserBook Load (0.1ms)[0m  SELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`user_id` = 1
+[1m[36mUsersBook Load (0.1ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1</pre>
+
+<p>Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.5ms)</p>
+
+<pre>[1m[36mUsersBook Load (0.6ms)[0m  [1mSELECT `users_books`.* FROM `users_books`[0m
+[1m[35mUsersBook Load (0.3ms)[0m  SELECT `users_books`.* FROM `users_books` WHERE `users_books`.`status` = 1
+[1m[36mUsersBook Load (0.3ms)[0m  [1mSELECT `users_books`.* FROM `users_books` WHERE `users_books`.`status` = 1[0m
+[1m[35mUsersBook Load (0.3ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`status` = 1  ORDER BY `users_books`.`id` ASC LIMIT 1000
+[1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1[0m
+[1m[36mUsersBook Load (0.2ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`status` = 1  ORDER BY `users_books`.`id` ASC LIMIT 1000[0m
+[1m[35mBook Load (0.8ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`users_book_id` = 2 LIMIT 1</pre>
+
+<p>Mysql2::Error: Unknown column &#39;books.users_book_id&#39; in &#39;where
+clause&#39;: SELECT  `books`.* FROM `books` WHERE `books`.`users_book_id` =
+2 LIMIT 1</p>
+
+<pre>[1m[36mUsersBook Load (0.2ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+[1m[36mUsersBook Load (0.4ms)[0m  [1mSELECT  `users_books`.* FROM `users_books`  ORDER BY `users_books`.`id` ASC LIMIT 1000[0m
+[1m[35mBook Load (0.3ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1
+[1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1[0m
+[1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 4 LIMIT 1
+[1m[36mUsersBook Load (0.3ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`status` = 1  ORDER BY `users_books`.`id` ASC LIMIT 1000[0m
+[1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1
+[1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 4 LIMIT 1[0m
+[1m[35mUsersBook Load (0.4ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`status` = 1  ORDER BY `users_books`.`id` ASC LIMIT 1000
+[1m[36mBook Load (0.3ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1[0m
+[1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 4 LIMIT 1</pre>
+
+<p>Started GET “/api/v1/books/available” for ::1 at 2016-03-13 00:26:21 -0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Processing by <a
+href="../Api/V1/BooksController.html#method-i-show">Api::V1::BooksController#show</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;available&quot;}
+[1m[35mBook Load (0.2ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 0 LIMIT 1</pre>
+
+<p>Completed 404 Not Found in 19ms (ActiveRecord: 1.6ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../Book.html">Book</a> with &#39;id&#39;=available):</p>
+
+<pre>app/controllers/api/v1/books_controller.rb:50:in `show&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.1ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (103.8ms)</pre>
+
+<p>Started GET “/api/v1/books/available” for ::1 at 2016-03-13 00:26:55 -0500
+Processing by <a
+href="../Api/V1/BooksController.html#method-i-show">Api::V1::BooksController#show</a>
+as JSON</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;available&quot;}
+[1m[36mBook Load (0.2ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 0 LIMIT 1[0m</pre>
+
+<p>Completed 404 Not Found in 9ms (ActiveRecord: 3.9ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../Book.html">Book</a> with &#39;id&#39;=available):</p>
+
+<pre>app/controllers/api/v1/books_controller.rb:50:in `show&#39;
+
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.8ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.5ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.1ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+Rendered /Users/vamsi.nukala/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (91.0ms)</pre>
+
+<p>Started GET “/api/v1/books/available” for ::1 at 2016-03-13 00:33:09 -0500</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (9.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Processing by <a
+href="../Api/V1/BooksController.html#method-i-get_available_books">Api::V1::BooksController#get_available_books</a>
+as JSON</p>
+
+<pre>[1m[35mUsersBook Load (0.2ms)[0m  SELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`status` = 1  ORDER BY `users_books`.`id` ASC LIMIT 1000
+[1m[36mBook Load (0.1ms)[0m  [1mSELECT  `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1[0m
+[1m[35mBook Load (0.1ms)[0m  SELECT  `books`.* FROM `books` WHERE `books`.`id` = 4 LIMIT 1</pre>
+
+<p>Completed 200 OK in 32ms (Views: 0.3ms | ActiveRecord: 2.8ms)</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

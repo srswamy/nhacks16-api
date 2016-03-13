@@ -18,9 +18,12 @@ Rails.application.routes.draw do
        put 'updateBookAvailability', to: 'users_books#update_book_availability'
       end
 		end
-		resources :books do 
-			resources :categories
-		end
+		resources :books, except: :show do 
+			collection do
+        get 'available', to: 'books#get_available_books'
+      end
+      resources :categories
+    end
 	end
   end
   

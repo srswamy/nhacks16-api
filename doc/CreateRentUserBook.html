@@ -2,522 +2,90 @@
 
 <html>
 <head>
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta charset="UTF-8">
 
 <title>class CreateRentUserBook - RDoc Documentation</title>
-
-<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
 </script>
 
-<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
 
 
-<body id="top" class="class">
-<nav id="metadata">
-  <nav id="home-section" class="section">
-  <h3 class="section-header">
-    <a href="./index.html">Home</a>
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
     <a href="./table_of_contents.html#classes">Classes</a>
     <a href="./table_of_contents.html#methods">Methods</a>
-  </h3>
-</nav>
+  </div>
+</div>
 
-
-  <nav id="search-section" class="section project-section" class="initially-hidden">
+    <div id="search-section" role="search" class="project-section initially-hidden">
   <form action="#" method="get" accept-charset="utf-8">
-    <h3 class="section-header">
-      <input type="text" name="search" placeholder="Search" id="search-field"
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
              title="Type to search, Up and Down to navigate, Enter to load">
-    </h3>
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
   </form>
+</div>
 
-  <ul id="search-results" class="initially-hidden"></ul>
-</nav>
-
+  </div>
 
   
-
-  <div id="file-metadata">
-    <nav id="file-list-section" class="section">
-  <h3 class="section-header">Defined In</h3>
-  <ul>
-    <li>db/migrate/20160312082334_create_rent_user_book.rb
-  </ul>
-</nav>
-
-    
-  </div>
 
   <div id="class-metadata">
     
-    <nav id="parent-class-section" class="section">
-  <h3 class="section-header">Parent</h3>
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
   
   <p class="link">ActiveRecord::Migration
   
-</nav>
+</div>
 
     
     
     <!-- Method Quickref -->
-<nav id="method-list-section" class="section">
-  <h3 class="section-header">Methods</h3>
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
 
-  <ul class="link-list">
+  <ul class="link-list" role="directory">
     
     <li ><a href="#method-i-change">#change</a>
     
   </ul>
-</nav>
-
-  </div>
-
-  <div id="project-metadata">
-    <nav id="fileindex-section" class="section project-section">
-  <h3 class="section-header">Pages</h3>
-
-  <ul>
-  
-    <li class="file"><a href="./Gemfile.html">Gemfile</a>
-  
-    <li class="file"><a href="./Gemfile_lock.html">Gemfile.lock</a>
-  
-    <li class="file"><a href="./README_rdoc.html">README</a>
-  
-    <li class="file"><a href="./Rakefile.html">Rakefile</a>
-  
-    <li class="file"><a href="./app/assets/javascripts/application_js.html">application.js</a>
-  
-    <li class="file"><a href="./app/assets/stylesheets/application_css.html">application.css</a>
-  
-    <li class="file"><a href="./config_ru.html">config.ru</a>
-  
-    <li class="file"><a href="./doc/ActiveRecord_html.html">ActiveRecord.html</a>
-  
-    <li class="file"><a href="./doc/ActiveSupport_html.html">ActiveSupport.html</a>
-  
-    <li class="file"><a href="./doc/ActiveSupport/TestCase_html.html">TestCase.html</a>
-  
-    <li class="file"><a href="./doc/AddDateAndHoursToBookAvailabilitiesTable_html.html">AddDateAndHoursToBookAvailabilitiesTable.html</a>
-  
-    <li class="file"><a href="./doc/AddDetailsToUsersBooks_html.html">AddDetailsToUsersBooks.html</a>
-  
-    <li class="file"><a href="./doc/AddKarmaToUsersTable_html.html">AddKarmaToUsersTable.html</a>
-  
-    <li class="file"><a href="./doc/Api_html.html">Api.html</a>
-  
-    <li class="file"><a href="./doc/Api/V1_html.html">V1.html</a>
-  
-    <li class="file"><a href="./doc/Api/V1/BooksController_html.html">BooksController.html</a>
-  
-    <li class="file"><a href="./doc/Api/V1/CategoriesController_html.html">CategoriesController.html</a>
-  
-    <li class="file"><a href="./doc/Api/V1/SchoolsController_html.html">SchoolsController.html</a>
-  
-    <li class="file"><a href="./doc/Api/V1/UsersBooksController_html.html">UsersBooksController.html</a>
-  
-    <li class="file"><a href="./doc/Api/V1/UsersController_html.html">UsersController.html</a>
-  
-    <li class="file"><a href="./doc/ApplicationController_html.html">ApplicationController.html</a>
-  
-    <li class="file"><a href="./doc/ApplicationHelper_html.html">ApplicationHelper.html</a>
-  
-    <li class="file"><a href="./doc/Book_html.html">Book.html</a>
-  
-    <li class="file"><a href="./doc/BookAvailability_html.html">BookAvailability.html</a>
-  
-    <li class="file"><a href="./doc/BookTest_html.html">BookTest.html</a>
-  
-    <li class="file"><a href="./doc/Category_html.html">Category.html</a>
-  
-    <li class="file"><a href="./doc/CategoryTest_html.html">CategoryTest.html</a>
-  
-    <li class="file"><a href="./doc/ChangeColumnNameInRentUserBook_html.html">ChangeColumnNameInRentUserBook.html</a>
-  
-    <li class="file"><a href="./doc/CreateBookAvailability_html.html">CreateBookAvailability.html</a>
-  
-    <li class="file"><a href="./doc/CreateBooks_html.html">CreateBooks.html</a>
-  
-    <li class="file"><a href="./doc/CreateCategories_html.html">CreateCategories.html</a>
-  
-    <li class="file"><a href="./doc/CreateRentUserBook_html.html">CreateRentUserBook.html</a>
-  
-    <li class="file"><a href="./doc/CreateSchools_html.html">CreateSchools.html</a>
-  
-    <li class="file"><a href="./doc/CreateUser_html.html">CreateUser.html</a>
-  
-    <li class="file"><a href="./doc/CreateUserBook_html.html">CreateUserBook.html</a>
-  
-    <li class="file"><a href="./doc/FixBooksUserIdColumn_html.html">FixBooksUserIdColumn.html</a>
-  
-    <li class="file"><a href="./doc/FixRenteeIdColName_html.html">FixRenteeIdColName.html</a>
-  
-    <li class="file"><a href="./doc/Gemfile_html.html">Gemfile.html</a>
-  
-    <li class="file"><a href="./doc/Gemfile_lock_html.html">Gemfile_lock.html</a>
-  
-    <li class="file"><a href="./doc/Logger_html.html">Logger.html</a>
-  
-    <li class="file"><a href="./doc/ModifyNameDataTypeInCategories_html.html">ModifyNameDataTypeInCategories.html</a>
-  
-    <li class="file"><a href="./doc/Nhacks16Web_html.html">Nhacks16Web.html</a>
-  
-    <li class="file"><a href="./doc/Nhacks16Web/Application_html.html">Application.html</a>
-  
-    <li class="file"><a href="./doc/Object_html.html">Object.html</a>
-  
-    <li class="file"><a href="./doc/README_rdoc_html.html">README_rdoc.html</a>
-  
-    <li class="file"><a href="./doc/Rakefile_html.html">Rakefile.html</a>
-  
-    <li class="file"><a href="./doc/RemoveAvailabilityIdFromUsersBooksTable_html.html">RemoveAvailabilityIdFromUsersBooksTable.html</a>
-  
-    <li class="file"><a href="./doc/RemoveDateTimesFromBookAvailabilitiesTable_html.html">RemoveDateTimesFromBookAvailabilitiesTable.html</a>
-  
-    <li class="file"><a href="./doc/RemoveDateTimesFromBooks_html.html">RemoveDateTimesFromBooks.html</a>
-  
-    <li class="file"><a href="./doc/RemoveDateTimesFromCategories_html.html">RemoveDateTimesFromCategories.html</a>
-  
-    <li class="file"><a href="./doc/RemoveDateTimesFromSchools_html.html">RemoveDateTimesFromSchools.html</a>
-  
-    <li class="file"><a href="./doc/RenameUserBooksToUsersBooks_html.html">RenameUserBooksToUsersBooks.html</a>
-  
-    <li class="file"><a href="./doc/RentUserBook_html.html">RentUserBook.html</a>
-  
-    <li class="file"><a href="./doc/School_html.html">School.html</a>
-  
-    <li class="file"><a href="./doc/SchoolTest_html.html">SchoolTest.html</a>
-  
-    <li class="file"><a href="./doc/User_html.html">User.html</a>
-  
-    <li class="file"><a href="./doc/UsersBook_html.html">UsersBook.html</a>
-  
-    <li class="file"><a href="./doc/UsersBookTest_html.html">UsersBookTest.html</a>
-  
-    <li class="file"><a href="./doc/app/assets/javascripts/application_js_html.html">application_js.html</a>
-  
-    <li class="file"><a href="./doc/app/assets/stylesheets/application_css_html.html">application_css.html</a>
-  
-    <li class="file"><a href="./doc/config_ru_html.html">config_ru.html</a>
-  
-    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
-  
-    <li class="file"><a href="./doc/css/fonts_css.html">fonts.css</a>
-  
-    <li class="file"><a href="./doc/css/rdoc_css.html">rdoc.css</a>
-  
-    <li class="file"><a href="./doc/doc/ActiveRecord_html_html.html">ActiveRecord_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/ActiveSupport/TestCase_html_html.html">TestCase_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/ActiveSupport_html_html.html">ActiveSupport_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/AddDateAndHoursToBookAvailabilitiesTable_html_html.html">AddDateAndHoursToBookAvailabilitiesTable_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/AddDetailsToUsersBooks_html_html.html">AddDetailsToUsersBooks_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/AddKarmaToUsersTable_html_html.html">AddKarmaToUsersTable_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Api/V1/BooksController_html_html.html">BooksController_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Api/V1/CategoriesController_html_html.html">CategoriesController_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Api/V1/SchoolsController_html_html.html">SchoolsController_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Api/V1/UsersBooksController_html_html.html">UsersBooksController_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Api/V1/UsersController_html_html.html">UsersController_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Api/V1_html_html.html">V1_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Api_html_html.html">Api_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/ApplicationController_html_html.html">ApplicationController_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/ApplicationHelper_html_html.html">ApplicationHelper_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/BookAvailability_html_html.html">BookAvailability_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/BookTest_html_html.html">BookTest_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Book_html_html.html">Book_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/CategoryTest_html_html.html">CategoryTest_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Category_html_html.html">Category_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/CreateBookAvailability_html_html.html">CreateBookAvailability_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/CreateBooks_html_html.html">CreateBooks_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/CreateCategories_html_html.html">CreateCategories_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/CreateRentUserBook_html_html.html">CreateRentUserBook_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/CreateSchools_html_html.html">CreateSchools_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/CreateUserBook_html_html.html">CreateUserBook_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/CreateUser_html_html.html">CreateUser_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/FixBooksUserIdColumn_html_html.html">FixBooksUserIdColumn_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/FixRenteeIdColName_html_html.html">FixRenteeIdColName_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Gemfile_html_html.html">Gemfile_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Gemfile_lock_html_html.html">Gemfile_lock_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Logger_html_html.html">Logger_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/ModifyNameDataTypeInCategories_html_html.html">ModifyNameDataTypeInCategories_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Nhacks16Web/Application_html_html.html">Application_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Nhacks16Web_html_html.html">Nhacks16Web_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Object_html_html.html">Object_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/README_rdoc_html_html.html">README_rdoc_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/Rakefile_html_html.html">Rakefile_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/RemoveAvailabilityIdFromUsersBooksTable_html_html.html">RemoveAvailabilityIdFromUsersBooksTable_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/RemoveDateTimesFromBookAvailabilitiesTable_html_html.html">RemoveDateTimesFromBookAvailabilitiesTable_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/RemoveDateTimesFromBooks_html_html.html">RemoveDateTimesFromBooks_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/RemoveDateTimesFromCategories_html_html.html">RemoveDateTimesFromCategories_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/RemoveDateTimesFromSchools_html_html.html">RemoveDateTimesFromSchools_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/RenameUserBooksToUsersBooks_html_html.html">RenameUserBooksToUsersBooks_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/RentUserBook_html_html.html">RentUserBook_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/SchoolTest_html_html.html">SchoolTest_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/School_html_html.html">School_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/User_html_html.html">User_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/UsersBookTest_html_html.html">UsersBookTest_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/UsersBook_html_html.html">UsersBook_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/app/assets/javascripts/application_js_html_html.html">application_js_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/app/assets/stylesheets/application_css_html_html.html">application_css_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/config_ru_html_html.html">config_ru_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/created_rid_html.html">created_rid.html</a>
-  
-    <li class="file"><a href="./doc/doc/css/fonts_css_html.html">fonts_css.html</a>
-  
-    <li class="file"><a href="./doc/doc/css/rdoc_css_html.html">rdoc_css.html</a>
-  
-    <li class="file"><a href="./doc/doc/doc/created_rid_html_html.html">created_rid_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/index_html_html.html">index_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/js/darkfish_js_html.html">darkfish_js.html</a>
-  
-    <li class="file"><a href="./doc/doc/js/jquery_js_html.html">jquery_js.html</a>
-  
-    <li class="file"><a href="./doc/doc/js/navigation_js_html.html">navigation_js.html</a>
-  
-    <li class="file"><a href="./doc/doc/js/search_index_js_html.html">search_index_js.html</a>
-  
-    <li class="file"><a href="./doc/doc/js/search_js_html.html">search_js.html</a>
-  
-    <li class="file"><a href="./doc/doc/js/searcher_js_html.html">searcher_js.html</a>
-  
-    <li class="file"><a href="./doc/doc/log/development_log_html_html.html">development_log_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/public/404_html_html_html.html">404_html_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/public/422_html_html_html.html">422_html_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/public/500_html_html_html.html">500_html_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/public/favicon_ico_html_html.html">favicon_ico_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/public/robots_txt_html_html.html">robots_txt_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/rdoc_css_html.html">rdoc_css.html</a>
-  
-    <li class="file"><a href="./doc/doc/table_of_contents_html_html.html">table_of_contents_html.html</a>
-  
-    <li class="file"><a href="./doc/doc/tmp/pids/server_pid_html_html.html">server_pid_html.html</a>
-  
-    <li class="file"><a href="./doc/index_html.html">index.html</a>
-  
-    <li class="file"><a href="./doc/js/darkfish_js.html">darkfish.js</a>
-  
-    <li class="file"><a href="./doc/js/jquery_js.html">jquery.js</a>
-  
-    <li class="file"><a href="./doc/js/navigation_js.html">navigation.js</a>
-  
-    <li class="file"><a href="./doc/js/search_js.html">search.js</a>
-  
-    <li class="file"><a href="./doc/js/search_index_js.html">search_index.js</a>
-  
-    <li class="file"><a href="./doc/js/searcher_js.html">searcher.js</a>
-  
-    <li class="file"><a href="./doc/log/development_log_html.html">development_log.html</a>
-  
-    <li class="file"><a href="./doc/public/404_html_html.html">404_html.html</a>
-  
-    <li class="file"><a href="./doc/public/422_html_html.html">422_html.html</a>
-  
-    <li class="file"><a href="./doc/public/500_html_html.html">500_html.html</a>
-  
-    <li class="file"><a href="./doc/public/favicon_ico_html.html">favicon_ico.html</a>
-  
-    <li class="file"><a href="./doc/public/robots_txt_html.html">robots_txt.html</a>
-  
-    <li class="file"><a href="./doc/rdoc_css.html">rdoc.css</a>
-  
-    <li class="file"><a href="./doc/table_of_contents_html.html">table_of_contents.html</a>
-  
-    <li class="file"><a href="./doc/tmp/pids/server_pid_html.html">server_pid.html</a>
-  
-    <li class="file"><a href="./log/development_log.html">development.log</a>
-  
-    <li class="file"><a href="./public/404_html.html">404.html</a>
-  
-    <li class="file"><a href="./public/422_html.html">422.html</a>
-  
-    <li class="file"><a href="./public/500_html.html">500.html</a>
-  
-    <li class="file"><a href="./public/favicon_ico.html">favicon.ico</a>
-  
-    <li class="file"><a href="./public/robots_txt.html">robots</a>
-  
-  </ul>
-</nav>
-
-    <nav id="classindex-section" class="section project-section">
-  <h3 class="section-header">Class and Module Index</h3>
-
-  <ul class="link-list">
-  
-    <li><a href="./ActiveRecord.html">ActiveRecord</a>
-  
-    <li><a href="./ActiveSupport.html">ActiveSupport</a>
-  
-    <li><a href="./ActiveSupport/TestCase.html">ActiveSupport::TestCase</a>
-  
-    <li><a href="./AddDateAndHoursToBookAvailabilitiesTable.html">AddDateAndHoursToBookAvailabilitiesTable</a>
-  
-    <li><a href="./AddDetailsToUsersBooks.html">AddDetailsToUsersBooks</a>
-  
-    <li><a href="./AddKarmaToUsersTable.html">AddKarmaToUsersTable</a>
-  
-    <li><a href="./Api.html">Api</a>
-  
-    <li><a href="./Api/V1.html">Api::V1</a>
-  
-    <li><a href="./Api/V1/BooksController.html">Api::V1::BooksController</a>
-  
-    <li><a href="./Api/V1/CategoriesController.html">Api::V1::CategoriesController</a>
-  
-    <li><a href="./Api/V1/SchoolsController.html">Api::V1::SchoolsController</a>
-  
-    <li><a href="./Api/V1/UsersBooksController.html">Api::V1::UsersBooksController</a>
-  
-    <li><a href="./Api/V1/UsersController.html">Api::V1::UsersController</a>
-  
-    <li><a href="./ApplicationController.html">ApplicationController</a>
-  
-    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
-  
-    <li><a href="./Book.html">Book</a>
-  
-    <li><a href="./BookAvailability.html">BookAvailability</a>
-  
-    <li><a href="./BookTest.html">BookTest</a>
-  
-    <li><a href="./Category.html">Category</a>
-  
-    <li><a href="./CategoryTest.html">CategoryTest</a>
-  
-    <li><a href="./ChangeColumnNameInRentUserBook.html">ChangeColumnNameInRentUserBook</a>
-  
-    <li><a href="./CreateBookAvailability.html">CreateBookAvailability</a>
-  
-    <li><a href="./CreateBooks.html">CreateBooks</a>
-  
-    <li><a href="./CreateCategories.html">CreateCategories</a>
-  
-    <li><a href="./CreateRentUserBook.html">CreateRentUserBook</a>
-  
-    <li><a href="./CreateSchools.html">CreateSchools</a>
-  
-    <li><a href="./CreateUser.html">CreateUser</a>
-  
-    <li><a href="./CreateUserBook.html">CreateUserBook</a>
-  
-    <li><a href="./FixBooksUserIdColumn.html">FixBooksUserIdColumn</a>
-  
-    <li><a href="./FixRenteeIdColName.html">FixRenteeIdColName</a>
-  
-    <li><a href="./Logger.html">Logger</a>
-  
-    <li><a href="./ModifyNameDataTypeInCategories.html">ModifyNameDataTypeInCategories</a>
-  
-    <li><a href="./Nhacks16Web.html">Nhacks16Web</a>
-  
-    <li><a href="./Nhacks16Web/Application.html">Nhacks16Web::Application</a>
-  
-    <li><a href="./Object.html">Object</a>
-  
-    <li><a href="./RemoveAvailabilityIdFromUsersBooksTable.html">RemoveAvailabilityIdFromUsersBooksTable</a>
-  
-    <li><a href="./RemoveDateTimesFromBookAvailabilitiesTable.html">RemoveDateTimesFromBookAvailabilitiesTable</a>
-  
-    <li><a href="./RemoveDateTimesFromBooks.html">RemoveDateTimesFromBooks</a>
-  
-    <li><a href="./RemoveDateTimesFromCategories.html">RemoveDateTimesFromCategories</a>
-  
-    <li><a href="./RemoveDateTimesFromSchools.html">RemoveDateTimesFromSchools</a>
-  
-    <li><a href="./RenameUserBooksToUsersBooks.html">RenameUserBooksToUsersBooks</a>
-  
-    <li><a href="./RentUserBook.html">RentUserBook</a>
-  
-    <li><a href="./School.html">School</a>
-  
-    <li><a href="./SchoolTest.html">SchoolTest</a>
-  
-    <li><a href="./User.html">User</a>
-  
-    <li><a href="./UsersBook.html">UsersBook</a>
-  
-    <li><a href="./UsersBookTest.html">UsersBookTest</a>
-  
-  </ul>
-</nav>
+</div>
 
   </div>
 </nav>
 
-<div id="documentation">
-  <h1 class="class">class CreateRentUserBook</h1>
+<main role="main" aria-labelledby="class-CreateRentUserBook">
+  <h1 id="class-CreateRentUserBook" class="class">
+    class CreateRentUserBook
+  </h1>
 
-  <div id="description" class="description">
+  <section class="description">
     
-  </div><!-- description -->
+  </section>
 
   
   
@@ -531,10 +99,11 @@
 
     
 
-    <!-- Methods -->
     
-     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Public Instance Methods</h3>
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
 
     
       <div id="method-i-change" class="method-detail ">
@@ -565,26 +134,25 @@
         <span class="ruby-identifier">t</span>.<span class="ruby-identifier">datetime</span> <span class="ruby-value">:end_time</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- change-source -->
+          </div>
           
         </div>
 
         
 
         
-      </div><!-- change-method -->
+      </div>
 
     
-    </section><!-- public-instance-method-details -->
+    </section>
   
-  </section><!-- 5Buntitled-5D -->
+  </section>
+</main>
 
-</div><!-- documentation -->
 
-
-<footer id="validator-badges">
-  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
-  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

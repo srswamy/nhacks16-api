@@ -71,4 +71,19 @@ skip_before_filter :verify_authenticity_token
   end
 
 
+  #=Endpoint: http://localhost:3000/api/v1/books/available
+  #=returns an array of available books
+  #=={"available_books":[{"id":2,"name":"Intro to something","category_id":1,"edition":2},{"id":4,"name":"testt","category_id":1,"edition":5}]}
+  
+  def get_available_books
+    json_array = Array.new
+    UsersBook.all.where(status: 1).find_each do |users_book|
+      book = users_book.book
+      json_array.push(book)
+    end
+
+    render :json => {:available_books => json_array}
+  end
+
+
 end
