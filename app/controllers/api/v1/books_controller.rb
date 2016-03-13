@@ -72,12 +72,16 @@ skip_before_filter :verify_authenticity_token
 
 
   #=Endpoint: http://localhost:3000/api/v1/books/available
-  #=returns an array of available books
+  #=Parameters:
+  #==user_id
+  #=Returns
+  #An array of available books
   #=={"available_books":[{"id":2,"name":"Intro to something","category_id":1,"edition":2},{"id":4,"name":"testt","category_id":1,"edition":5}]}
-  
+
   def get_available_books
+    user = User.find(params[:user_id])
     json_array = Array.new
-    UsersBook.all.where(status: 1).find_each do |users_book|
+    UsersBook.all.where(status: 1).where.not(user_id: user.id).find_each do |users_book|
       book = users_book.book
       json_array.push(book)
     end
