@@ -22,7 +22,7 @@ Rails.application.routes.draw do
         put 'updateReturn', to: 'users_books#update_sent'
         put 'updateBookAvailability', to: 'users_books#update_book_availability'
         collection do
-          post 'rent', to: 'users_book#rent_this_book'
+          post 'rent', to: 'users_books#rent_this_book'
         end
       end
 		end
