@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 		resources :users do
       collection do
           get 'books/owner', to: 'users_books#get_book_owner'
+          get 'books/info', to: 'users_books#get_info'
       end
 
       get 'lent_books', to: 'users#get_lent_books'

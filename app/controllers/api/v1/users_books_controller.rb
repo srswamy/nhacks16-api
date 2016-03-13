@@ -110,7 +110,7 @@ skip_before_filter :verify_authenticity_token
   	 render :json => {:status => "success"}
   end
 
-  #Endpoint: http://localhost:3000/api/v1/users/books/owner
+  #Endpoint: /api/v1/users/books/owner
   #=Parameters
   #==users_book_id
   #=Returns
@@ -120,6 +120,19 @@ skip_before_filter :verify_authenticity_token
     book = UsersBook.find(params[:users_book_id])
 
     render :json => {:book_owner => book.user}
+  end
+
+  #Endpoint: /api/v1/users/books/info
+  #==Parameters
+  #=users_book_id
+  #==Returns
+  #=The book, The book availability times, info about the users_book(status, returned, price etc)
+  #=Example response:
+  #{"book":{"id":1,"name":"Introduction to databases","category_id":1,"edition":4},"book_availabilities":[{"id":1,"users_book_id":1,"date":null,"hours":null},{"id":2,"users_book_id":1,"date":null,"hours":null}],"users_book":{"id":1,"user_id":1,"book_id":1,"status":false,"sent":null,"returned":null,"price_per_hour":null}}
+  def get_info
+    users_book = UsersBook.find(params[:users_book_id])
+    book_availabilities = users_book.book_availabilities
+    render :json => {:book => users_book.book, :book_availabilities => book_availabilities, :users_book => users_book}
   end
 
 
