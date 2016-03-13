@@ -13,8 +13,19 @@ skip_before_filter :verify_authenticity_token
   def create
     new_user_book = UsersBook.new
   	new_user_book.user_id = params[:user_id]
-  	selected_book = Book.find(name: params[:book_name])
-  	new_user_book.book_id = selected_book.id
+
+    if Book.where(name: => params[:book_name]).present?
+      selected_book = Book.find(name: params[:book_name])
+  	  new_user_book.book_id = selected_book.id
+    else
+      selected_book = Book.new
+      selected_book.name = params[:book_name]
+      selected_book.category_id = params[:category_id]
+      selected_book.edition = params[:edition]
+      selected_book.save
+      new_user_book.book_id = selected_book.id
+    end
+    
   	new_user_book.status = params[:status]
   	new_user_book.sent = false
   	new_user_book.returned = false

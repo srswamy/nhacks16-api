@@ -25,7 +25,7 @@ skip_before_filter :verify_authenticity_token
 		new_user.school_id = new_user_school.id
 	end
   	new_user.save
-  	render :json => {:status => "success"}
+  	render :json => {:status => "success", :user_id => new_user.id}
   end
 
   def show
