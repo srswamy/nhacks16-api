@@ -39,7 +39,7 @@ skip_before_filter :verify_authenticity_token
     #Add the book availabilities now
     book_availabilities_array = JSON.parse(params[:book_availabilities])
     book_availabilities_array.each do |book_availability|
-      user_books.book_availabilities.create(users_book_id: user_books.id, date: book_availability.date, hours: book_availability.hours)
+      user_books.book_availabilities.create(users_book_id: user_books.id, date: book_availability["date"], hours: book_availability["hours"])
     end
 
     render :json => {:status => "success"}
