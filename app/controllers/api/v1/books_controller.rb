@@ -20,17 +20,10 @@ skip_before_filter :verify_authenticity_token
   # => +book_availabilities+ -> an array of JSON with the book_availability times as follows:
   # => -> "book_availabilities": [{date: "2012-02-02", hours: "2,4,5,7"}, {date: "2012-02-23", hours: "3,4,6,7"}]
   def create
-    if Category.where(:name => params[:category_name]).present?
-        new_book.category_id = Category.find_by(name: params[:category_name]).id
-    else
-        new_book_category = Category.new
-        new_book_category.name = params[:category_name]
-        new_book_category.save
-        new_book.category_id = new_book_category.id
-    end
-
+    new_book_category_id = Category.find_by(name: params[:category_name]).id
+    
     user = User.find(params[:user_id])
-    book = user.books.create(name: params[:name], edition: params[:edition], category_id: new_book_category.id)
+    book = user.books.create(name: params[:name], edition: params[:edition], category_id: new_book_category_id)
   	user_books = user.user_books.where(book_id: book.id)
     user_books.status = 1
     user_books.sent = 0
