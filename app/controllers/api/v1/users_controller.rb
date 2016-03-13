@@ -77,6 +77,7 @@ skip_before_filter :verify_authenticity_token
     render :json => {:books => json_array}
   end
 
+  #Endpoint: /api/v1/users/:user_id/borrowed
   #Takes in a user ID as an argument and returns all the books that are borrowed by that user
   #*Args*
   #user_id -> user_id of the user

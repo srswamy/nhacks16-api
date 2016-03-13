@@ -1,11 +1,11 @@
-Sun, 13 Mar 2016 00:34:58 -0500
+Sun, 13 Mar 2016 04:15:26 -0400
 ./app/assets/javascripts/application.js	Sat, 12 Mar 2016 04:16:28 -0500
 ./app/assets/stylesheets/application.css	Sat, 12 Mar 2016 04:16:28 -0500
-./app/controllers/api/v1/books_controller.rb	Sun, 13 Mar 2016 00:34:34 -0500
+./app/controllers/api/v1/books_controller.rb	Sun, 13 Mar 2016 04:02:18 -0400
 ./app/controllers/api/v1/categories_controller.rb	Sat, 12 Mar 2016 19:53:49 -0500
 ./app/controllers/api/v1/schools_controller.rb	Sat, 12 Mar 2016 19:53:49 -0500
-./app/controllers/api/v1/users_books_controller.rb	Sat, 12 Mar 2016 23:50:03 -0500
-./app/controllers/api/v1/users_controller.rb	Sat, 12 Mar 2016 23:50:06 -0500
+./app/controllers/api/v1/users_books_controller.rb	Sun, 13 Mar 2016 01:51:56 -0500
+./app/controllers/api/v1/users_controller.rb	Sun, 13 Mar 2016 04:15:15 -0400
 ./app/controllers/application_controller.rb	Sat, 12 Mar 2016 04:16:28 -0500
 ./app/helpers/application_helper.rb	Sat, 12 Mar 2016 04:16:28 -0500
 ./app/models/book.rb	Sat, 12 Mar 2016 13:52:18 -0500
@@ -37,7 +37,7 @@ Sun, 13 Mar 2016 00:34:58 -0500
 ./config/initializers/session_store.rb	Sat, 12 Mar 2016 22:39:23 -0500
 ./config/initializers/wrap_parameters.rb	Sat, 12 Mar 2016 22:39:23 -0500
 ./config/locales/en.yml	Sat, 12 Mar 2016 22:39:23 -0500
-./config/routes.rb	Sun, 13 Mar 2016 00:32:42 -0500
+./config/routes.rb	Sun, 13 Mar 2016 01:51:56 -0500
 ./config/secrets.yml	Sat, 12 Mar 2016 22:39:23 -0500
 ./config.ru	Sat, 12 Mar 2016 04:16:28 -0500
 ./db/migrate/20160312074033_create_books.rb	Sat, 12 Mar 2016 04:16:28 -0500
@@ -64,7 +64,7 @@ Sun, 13 Mar 2016 00:34:58 -0500
 ./db/seeds.rb	Sat, 12 Mar 2016 04:16:28 -0500
 ./Gemfile	Sat, 12 Mar 2016 21:27:35 -0500
 ./Gemfile.lock	Sat, 12 Mar 2016 21:27:35 -0500
-./log/development.log	Sun, 13 Mar 2016 00:33:12 -0500
+./log/development.log	Sun, 13 Mar 2016 03:18:42 -0400
 ./public/404.html	Sat, 12 Mar 2016 04:16:28 -0500
 ./public/422.html	Sat, 12 Mar 2016 04:16:28 -0500
 ./public/500.html	Sat, 12 Mar 2016 04:16:28 -0500

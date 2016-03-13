@@ -150,27 +150,26 @@
           <div class="method-source-code" id="create-source">
             <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 22</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
-  <span class="ruby-keyword">if</span> <span class="ruby-constant">Category</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:category_name</span>]).<span class="ruby-identifier">present?</span>
-      <span class="ruby-identifier">new_book</span>.<span class="ruby-identifier">category_id</span> = <span class="ruby-constant">Category</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:category_name</span>]).<span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">new_book_category_id</span> = <span class="ruby-constant">Category</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:category_name</span>]).<span class="ruby-identifier">id</span>    
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>])
+
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Book</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>]).<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">book</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>])
   <span class="ruby-keyword">else</span>
-      <span class="ruby-identifier">new_book_category</span> = <span class="ruby-constant">Category</span>.<span class="ruby-identifier">new</span>
-      <span class="ruby-identifier">new_book_category</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:category_name</span>]
-      <span class="ruby-identifier">new_book_category</span>.<span class="ruby-identifier">save</span>
-      <span class="ruby-identifier">new_book</span>.<span class="ruby-identifier">category_id</span> = <span class="ruby-identifier">new_book_category</span>.<span class="ruby-identifier">id</span>
+    <span class="ruby-identifier">book</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">books</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>], <span class="ruby-identifier">edition</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:edition</span>], <span class="ruby-identifier">category_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">new_book_category_id</span>)
   <span class="ruby-keyword">end</span>
 
-  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>])
-  <span class="ruby-identifier">book</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">books</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>], <span class="ruby-identifier">edition</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:edition</span>], <span class="ruby-identifier">category_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">new_book_category</span>.<span class="ruby-identifier">id</span>)
-      <span class="ruby-identifier">user_books</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">book_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">book</span>.<span class="ruby-identifier">id</span>)
-  <span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">status</span> = <span class="ruby-value">1</span>
-  <span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">sent</span> = <span class="ruby-value">0</span>
-  <span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">returned</span> = <span class="ruby-value">0</span>
+      <span class="ruby-identifier">user_books</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">users_books</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">book_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">book</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">status</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">sent</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">returned</span> = <span class="ruby-keyword">false</span>
   <span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">price_per_hour</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:price_per_hour</span>]
+  <span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">save</span>
 
   <span class="ruby-comment">#Add the book availabilities now</span>
   <span class="ruby-identifier">book_availabilities_array</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:book_availabilities</span>])
   <span class="ruby-identifier">book_availabilities_array</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">book_availability</span><span class="ruby-operator">|</span>
-    <span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">book_availabilities</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">users_book_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">date</span><span class="ruby-operator">:</span> <span class="ruby-identifier">book_availability</span>.<span class="ruby-identifier">date</span>, <span class="ruby-identifier">hours</span><span class="ruby-operator">:</span> <span class="ruby-identifier">book_availability</span>.<span class="ruby-identifier">hours</span>)
+    <span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">book_availabilities</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">users_book_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">date</span><span class="ruby-operator">:</span> <span class="ruby-identifier">book_availability</span>[<span class="ruby-string">&quot;date&quot;</span>].<span class="ruby-identifier">to_date</span>, <span class="ruby-identifier">hours</span><span class="ruby-operator">:</span> <span class="ruby-identifier">book_availability</span>[<span class="ruby-string">&quot;hours&quot;</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;,&quot;</span>).<span class="ruby-identifier">to_str</span>)
   <span class="ruby-keyword">end</span>
 
   <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;success&quot;</span>}
@@ -204,7 +203,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 67</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 66</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
        <span class="ruby-identifier">del_entry</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
        <span class="ruby-identifier">del_entry</span>.<span class="ruby-identifier">destroy</span>
@@ -239,7 +238,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 53</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 52</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
 
 <span class="ruby-keyword">end</span></pre>
@@ -268,20 +267,32 @@
           
           <h1 id="method-i-get_available_books-label-Endpoint-3A+http-3A-2F-2Flocalhost-3A3000-2Fapi-2Fv1-2Fbooks-2Favailable">Endpoint: <a href="http://localhost:3000/api/v1/books/available">localhost:3000/api/v1/books/available</a><span><a href="#method-i-get_available_books-label-Endpoint-3A+http-3A-2F-2Flocalhost-3A3000-2Fapi-2Fv1-2Fbooks-2Favailable">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
-<h1 id="method-i-get_available_books-label-returns+an+array+of+available+books">returns an array of available books<span><a href="#method-i-get_available_books-label-returns+an+array+of+available+books">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<h1 id="method-i-get_available_books-label-Parameters-3A">Parameters:<span><a href="#method-i-get_available_books-label-Parameters-3A">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
-<h2 id="method-i-get_available_books-label-7B-22available_books-22-3A-5B-7B-22id-22-3A2-2C-22name-22-3A-22Intro+to+something-22-2C-22category_id-22-3A1-2C-22edition-22-3A2-7D-2C-7B-22id-22-3A4-2C-22name-22-3A-22testt-22-2C-22category_id-22-3A1-2C-22edition-22-3A5-7D-5D-7D">{“available_books”:[{“id”:2,“name”:“Intro to something”,“category_id”:1,“edition”:2},{“id”:4,“name”:“testt”,“category_id”:1,“edition”:5}]}<span><a href="#method-i-get_available_books-label-7B-22available_books-22-3A-5B-7B-22id-22-3A2-2C-22name-22-3A-22Intro+to+something-22-2C-22category_id-22-3A1-2C-22edition-22-3A2-7D-2C-7B-22id-22-3A4-2C-22name-22-3A-22testt-22-2C-22category_id-22-3A1-2C-22edition-22-3A5-7D-5D-7D">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<h2 id="method-i-get_available_books-label-user_id">user_id<span><a href="#method-i-get_available_books-label-user_id">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h1 id="method-i-get_available_books-label-Returns">Returns<span><a href="#method-i-get_available_books-label-Returns">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>An array of available books, along with the user_book_id The user_book_id
+is required to retrieve a particular user-book combination</p>
+
+<h2 id="method-i-get_available_books-label-7B-22available_books-22-3A-7D">{“<a href="{"book":{"id":4,"name":"testt","category_id":1,"edition":5},"user_book_id":3}">available_books”:</a>}<span><a href="#method-i-get_available_books-label-7B-22available_books-22-3A-7D">&para;</a> <a href="#top">&uarr;</a></span></h2>
           
           
 
           
           <div class="method-source-code" id="get_available_books-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 78</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 81</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_available_books</span>
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>])
   <span class="ruby-identifier">json_array</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
-  <span class="ruby-constant">UsersBook</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">find_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">users_book</span><span class="ruby-operator">|</span>
+  <span class="ruby-constant">UsersBook</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">user_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">find_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">users_book</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">json_obj</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
     <span class="ruby-identifier">book</span> = <span class="ruby-identifier">users_book</span>.<span class="ruby-identifier">book</span>
-    <span class="ruby-identifier">json_array</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">book</span>)
+    <span class="ruby-identifier">user_book_id</span> = <span class="ruby-identifier">users_book</span>.<span class="ruby-identifier">id</span>
+    <span class="ruby-identifier">json_obj</span>[<span class="ruby-string">&quot;book&quot;</span>] = <span class="ruby-identifier">book</span>
+    <span class="ruby-identifier">json_obj</span>[<span class="ruby-string">&quot;user_book_id&quot;</span>] = <span class="ruby-identifier">user_book_id</span>
+    <span class="ruby-identifier">json_array</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">json_obj</span>)
   <span class="ruby-keyword">end</span>
 
   <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:available_books</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">json_array</span>}
@@ -382,7 +393,7 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 49</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 48</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
       <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-constant">Book</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 <span class="ruby-keyword">end</span></pre>
@@ -415,7 +426,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 57</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 56</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
        <span class="ruby-identifier">selected_book</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
        <span class="ruby-identifier">selected_book</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>]

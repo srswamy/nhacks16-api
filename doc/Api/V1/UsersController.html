@@ -135,9 +135,10 @@
 
         <div class="method-description">
           
-          <p>Takes in a user ID as an argument and returns all the books that are
-borrowed by that user <strong>Args</strong> user_id -&gt; user_id of the
-user <strong>Returns</strong></p>
+          <p>Endpoint: /api/v1/users/:user_id/borrowed Takes in a user ID as an argument
+and returns all the books that are borrowed by that user
+<strong>Args</strong> user_id -&gt; user_id of the user
+<strong>Returns</strong></p>
 
 <h1 id="method-i-borrowed-label-books+--3E+a+JSON+array+of+the+borrowed+books">books -&gt; a JSON array of the borrowed books<span><a href="#method-i-borrowed-label-books+--3E+a+JSON+array+of+the+borrowed+books">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
@@ -147,7 +148,7 @@ user <strong>Returns</strong></p>
 
           
           <div class="method-source-code" id="borrowed-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/v1/users_controller.rb, line 86</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/users_controller.rb, line 87</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">borrowed</span>
   <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>])
   <span class="ruby-identifier">rent_user_books</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">rent_user_books</span>
