@@ -15,7 +15,7 @@ skip_before_filter :verify_authenticity_token
   	new_user_book.user_id = params[:user_id]
 
     if Book.where(:name => params[:book_name]).present?
-      selected_book = Book.find(name: params[:book_name])
+      selected_book = Book.find_by(name: params[:book_name])
   	  new_user_book.book_id = selected_book.id
     else
       selected_book = Book.new
