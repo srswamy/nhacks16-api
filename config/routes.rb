@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       get 'lent_books', to: 'users#get_lent_books'
       get 'borrowed', to: 'users#borrowed'
 			resources :schools
-			resources :books, :controller => 'users_books' do
+			resources :books do
         put 'updateStatus', to: 'users_books#update_status'
         put 'updateSent', to: 'users_books#update_sent'
         put 'updateReturn', to: 'users_books#update_sent'
