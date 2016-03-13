@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   namespace :api, :defaults => { :format => :json } do
   	namespace :v1 do
 		resources :users do
+      get 'lent_books', to: 'users#get_lent_books'
 			resources :schools
 			resources :books, :controller => 'users_books' do
        put 'updateStatus', to: 'users_books#update_status'
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
       end
 		end
 		resources :books do 
-      get 'borrowers', to 'books#borrowers'
+      get 'borrowers', to: 'books#borrowers'
 			resources :categories
 		end
 	end

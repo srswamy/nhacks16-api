@@ -60,17 +60,17 @@ skip_before_filter :verify_authenticity_token
   #facebook_id -> facebook_id of the user
   #*Returns*
   #=books -> a JSON array of the lent books
-  #==[0: {current_status: 0, book: {id: 1, users_book_id: 1, date: "2012-03-20", hours: "3,5,7,8,12"}}]
+  #=={"books":[{"current_status":0,"book":{"id":1,"name":"Introduction to databases","category_id":1,"edition":4}},{"current_status":0,"book":{"id":1,"name":"Introduction to databases","category_id":1,"edition":4}},{"current_status":1,"book":{"id":2,"name":"Intro to something","category_id":1,"edition":2}}]}
   def get_lent_books
-    user = User.findBy(facebook_id: params[:facebook_id])
+    user = User.find_by(facebook_id: params[:user_id])
     book_availabilities = user.book_availabilities
     json_array = Array.new
     book_availabilities.each do |availability|
       current_json_obj = Hash.new
       current_status = availability.current_status
       book = availability.book
-      current_json_obj.current_status = current_status
-      current_json_obj.book = book
+      current_json_obj["current_status"] = current_status
+      current_json_obj["book"] = book
       json_array.push(current_json_obj)
     end
 
