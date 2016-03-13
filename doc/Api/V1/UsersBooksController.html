@@ -86,6 +86,8 @@
     
     <li ><a href="#method-i-new">#new</a>
     
+    <li ><a href="#method-i-rent_this_book">#rent_this_book</a>
+    
     <li ><a href="#method-i-show">#show</a>
     
     <li ><a href="#method-i-update">#update</a>
@@ -315,13 +317,15 @@
           
           <p>Endpoint: /api/v1/users/books/owner</p>
 
-<h1 id="method-i-get_book_owner-label-Parameters">Parameters<span><a href="#method-i-get_book_owner-label-Parameters">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<h2 id="method-i-get_book_owner-label-Parameters">Parameters<span><a href="#method-i-get_book_owner-label-Parameters">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<h2 id="method-i-get_book_owner-label-users_book_id">users_book_id<span><a href="#method-i-get_book_owner-label-users_book_id">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<p>users_book_id</p>
 
-<h1 id="method-i-get_book_owner-label-Returns">Returns<span><a href="#method-i-get_book_owner-label-Returns">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<h2 id="method-i-get_book_owner-label-Returns">Returns<span><a href="#method-i-get_book_owner-label-Returns">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<h2 id="method-i-get_book_owner-label-A+user+row">A user row<span><a href="#method-i-get_book_owner-label-A+user+row">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<p>A user row</p>
+
+<h2 id="method-i-get_book_owner-label-Example+response-3A">Example response:<span><a href="#method-i-get_book_owner-label-Example+response-3A">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
 <p>{“book_owner”:{“id”:1,“name”:“NV”,“facebook_id”:“10”,“email”:“envybhargava26@gmail.com”,“school_id”:1,“karma”:null}}</p>
           
@@ -329,7 +333,7 @@
 
           
           <div class="method-source-code" id="get_book_owner-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/v1/users_books_controller.rb, line 119</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/users_books_controller.rb, line 120</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_book_owner</span>
   <span class="ruby-identifier">book</span> = <span class="ruby-constant">UsersBook</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:users_book_id</span>])
 
@@ -362,13 +366,14 @@
 
 <h2 id="method-i-get_info-label-Parameters">Parameters<span><a href="#method-i-get_info-label-Parameters">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<h1 id="method-i-get_info-label-users_book_id">users_book_id<span><a href="#method-i-get_info-label-users_book_id">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<p>users_book_id</p>
 
 <h2 id="method-i-get_info-label-Returns">Returns<span><a href="#method-i-get_info-label-Returns">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<h1 id="method-i-get_info-label-The+book-2C+The+book+availability+times-2C+info+about+the+users_book-28status-2C+returned-2C+price+etc-29">The book, The book availability times, info about the users_book(status, returned, price etc)<span><a href="#method-i-get_info-label-The+book-2C+The+book+availability+times-2C+info+about+the+users_book-28status-2C+returned-2C+price+etc-29">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<p>The book, The book availability times, info about the users_book(status,
+returned, price etc)</p>
 
-<h1 id="method-i-get_info-label-Example+response-3A">Example response:<span><a href="#method-i-get_info-label-Example+response-3A">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<h2 id="method-i-get_info-label-Example+response-3A">Example response:<span><a href="#method-i-get_info-label-Example+response-3A">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
 <p>{“book”:{“id”:1,“name”:“Introduction to
 databases”,“category_id”:1,“edition”:4},“<a
@@ -378,7 +383,7 @@ href="{"id":1,"users_book_id":1,"date":null,"hours":null},{"id":2,"users_book_id
 
           
           <div class="method-source-code" id="get_info-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/v1/users_books_controller.rb, line 132</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/users_books_controller.rb, line 133</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_info</span>
   <span class="ruby-identifier">users_book</span> = <span class="ruby-constant">UsersBook</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:users_book_id</span>])
   <span class="ruby-identifier">book_availabilities</span> = <span class="ruby-identifier">users_book</span>.<span class="ruby-identifier">book_availabilities</span>
@@ -450,6 +455,58 @@ href="{"id":1,"users_book_id":1,"date":null,"hours":null},{"id":2,"users_book_id
             <pre><span class="ruby-comment"># File app/controllers/api/v1/users_books_controller.rb, line 9</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
 
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-rent_this_book" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rent_this_book</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Endpoint: /api/v1/users/:user_id/books/rent(.:format)</p>
+
+<h2 id="method-i-rent_this_book-label-Parameters-3A">Parameters:<span><a href="#method-i-rent_this_book-label-Parameters-3A">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>user_id -&gt; user id of the user who is going to rent the book
+users_book_id -&gt; users_book_id which is going to be used for info about
+the book rent_user_times -&gt; the rent times, for example:
+“rent_user_times”: [{date: “2012-02-02”, hours: “2,4,5,7”}, {date:
+“2012-02-23”, hours: “3,4,6,7”}]</p>
+          
+          
+
+          
+          <div class="method-source-code" id="rent_this_book-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/users_books_controller.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rent_this_book</span>
+  <span class="ruby-identifier">users_book</span> = <span class="ruby-constant">UsersBook</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:users_book_id</span>])
+  <span class="ruby-identifier">users_book</span>.<span class="ruby-identifier">status</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">users_book</span>.<span class="ruby-identifier">save</span>
+
+  <span class="ruby-comment">#Add the book availabilities now</span>
+  <span class="ruby-identifier">rent_user_times_array</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:rent_user_times</span>])
+  <span class="ruby-identifier">rentee_id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>]
+  <span class="ruby-identifier">rent_user_times_array</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">rent_user_time</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">users_book</span>.<span class="ruby-identifier">rent_user_books</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">user_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">rentee_id</span>, <span class="ruby-identifier">date</span><span class="ruby-operator">:</span> <span class="ruby-identifier">rent_user_time</span>[<span class="ruby-string">&quot;date&quot;</span>].<span class="ruby-identifier">to_date</span>, <span class="ruby-identifier">hours</span><span class="ruby-operator">:</span> <span class="ruby-identifier">rent_user_time</span>[<span class="ruby-string">&quot;hours&quot;</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;,&quot;</span>).<span class="ruby-identifier">to_str</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;success&quot;</span>}
 <span class="ruby-keyword">end</span></pre>
           </div>
           

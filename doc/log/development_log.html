@@ -3012,6 +3012,142 @@ as JSON</p>
 [1m[36mBookAvailability Load (0.2ms)[0m  [1mSELECT `book_availabilities`.* FROM `book_availabilities` WHERE `book_availabilities`.`users_book_id` = 1[0m</pre>
 
 <p>Completed 200 OK in 30ms (Views: 4.7ms | ActiveRecord: 3.8ms)</p>
+
+<pre>[1m[36mUsersBook Load (0.3ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mRentUserBook Load (0.2ms)[0m  SELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`users_book_id` = 1
+[1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `rent_user_books` WHERE `rent_user_books`.`users_book_id` = 1[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m</pre>
+
+<p>Migrating to <a
+href="../RemoveDateTimesFromRentUserBooksTable.html">RemoveDateTimesFromRentUserBooksTable</a>
+(20160313133154)</p>
+
+<pre>[1m[35m (27.6ms)[0m  ALTER TABLE `rent_user_books` DROP `start_time`
+[1m[36m (15.2ms)[0m  [1mALTER TABLE `rent_user_books` DROP `end_time`[0m
+[1m[35m (0.1ms)[0m  BEGIN
+[1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160313133154&#39;)[0m
+[1m[35m (0.2ms)[0m  COMMIT</pre>
+
+<p>Migrating to <a
+href="../AddDateAndHoursToRentUserBooksTable.html">AddDateAndHoursToRentUserBooksTable</a>
+(20160313133255)</p>
+
+<pre>[1m[36m (14.5ms)[0m  [1mALTER TABLE `rent_user_books` ADD `date` date[0m
+[1m[35m (14.2ms)[0m  ALTER TABLE `rent_user_books` ADD `hours` varchar(255)
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (&#39;20160313133255&#39;)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+[1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;book_availabilities&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `book_availabilities`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `books`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;categories&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `categories`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;rent_user_books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `rent_user_books`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;schools&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `schools`
+[1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;users&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+[1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as &#39;to_table&#39;
+    ,fk.referenced_column_name as &#39;primary_key&#39;
+    ,fk.column_name as &#39;column&#39;
+    ,fk.constraint_name as &#39;name&#39;</pre>
+
+<p>FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name
+is not null</p>
+
+<pre class="ruby"><span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_schema</span> = <span class="ruby-string">&#39;nhacks16&#39;</span>
+<span class="ruby-constant">AND</span> <span class="ruby-identifier">fk</span>.<span class="ruby-identifier">table_name</span> = <span class="ruby-string">&#39;users_books&#39;</span>
+</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users_books`
+[1m[36mUsersBook Load (0.2ms)[0m  [1mSELECT  `users_books`.* FROM `users_books` WHERE `users_books`.`id` = 1 LIMIT 1[0m
+[1m[35mRentUserBook Load (0.1ms)[0m  SELECT `rent_user_books`.* FROM `rent_user_books` WHERE `rent_user_books`.`users_book_id` = 1
+[1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[1m[35mSQL (2.1ms)[0m  INSERT INTO `rent_user_books` (`user_id`, `date`, `hours`, `users_book_id`) VALUES (1, &#39;2016-03-13&#39;, &#39;3,4,5,6,7,8&#39;, 1)
+[1m[36m (0.2ms)[0m  [1mCOMMIT[0m</pre>
 </main>
 
 

@@ -267,11 +267,11 @@
           
           <h1 id="method-i-get_available_books-label-Endpoint-3A+http-3A-2F-2Flocalhost-3A3000-2Fapi-2Fv1-2Fbooks-2Favailable">Endpoint: <a href="http://localhost:3000/api/v1/books/available">localhost:3000/api/v1/books/available</a><span><a href="#method-i-get_available_books-label-Endpoint-3A+http-3A-2F-2Flocalhost-3A3000-2Fapi-2Fv1-2Fbooks-2Favailable">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
-<h1 id="method-i-get_available_books-label-Parameters-3A">Parameters:<span><a href="#method-i-get_available_books-label-Parameters-3A">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<h2 id="method-i-get_available_books-label-Parameters-3A">Parameters:<span><a href="#method-i-get_available_books-label-Parameters-3A">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<h2 id="method-i-get_available_books-label-user_id">user_id<span><a href="#method-i-get_available_books-label-user_id">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<p>user_id</p>
 
-<h1 id="method-i-get_available_books-label-Returns">Returns<span><a href="#method-i-get_available_books-label-Returns">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<h2 id="method-i-get_available_books-label-Returns">Returns<span><a href="#method-i-get_available_books-label-Returns">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
 <p>An array of available books, along with the user_book_id The user_book_id
 is required to retrieve a particular user-book combination</p>
@@ -292,6 +292,8 @@ is required to retrieve a particular user-book combination</p>
     <span class="ruby-identifier">user_book_id</span> = <span class="ruby-identifier">users_book</span>.<span class="ruby-identifier">id</span>
     <span class="ruby-identifier">json_obj</span>[<span class="ruby-string">&quot;book&quot;</span>] = <span class="ruby-identifier">book</span>
     <span class="ruby-identifier">json_obj</span>[<span class="ruby-string">&quot;user_book_id&quot;</span>] = <span class="ruby-identifier">user_book_id</span>
+    <span class="ruby-identifier">json_obj</span>[<span class="ruby-string">&quot;price&quot;</span>] = <span class="ruby-identifier">users_book</span>.<span class="ruby-identifier">price_per_hour</span>
+    <span class="ruby-identifier">json_obj</span>[<span class="ruby-string">&quot;rented_count&quot;</span>] = <span class="ruby-identifier">users_book</span>.<span class="ruby-identifier">rent_user_books</span>.<span class="ruby-identifier">count</span>
     <span class="ruby-identifier">json_array</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">json_obj</span>)
   <span class="ruby-keyword">end</span>
 
