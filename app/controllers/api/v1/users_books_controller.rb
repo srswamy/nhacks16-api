@@ -25,7 +25,7 @@ skip_before_filter :verify_authenticity_token
       selected_book.save
       new_user_book.book_id = selected_book.id
     end
-    
+
   	new_user_book.status = params[:status]
   	new_user_book.sent = false
   	new_user_book.returned = false
@@ -33,7 +33,7 @@ skip_before_filter :verify_authenticity_token
   	new_user_book.save
 
   	new_book_avail = BookAvailability.new
-  	new_book_avail.user_book_id = new_user_book.id
+  	new_book_avail.users_book_id = new_user_book.id
   	new_book_avail.start_availability = params[:start]
   	new_book_avail.end_availability = params[:end]
   	new_book_avail.save
