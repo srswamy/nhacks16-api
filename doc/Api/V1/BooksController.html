@@ -2,76 +2,73 @@
 
 <html>
 <head>
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta charset="UTF-8">
 
 <title>class Api::V1::BooksController - RDoc Documentation</title>
-
-<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../../";
 </script>
 
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
 
 
-<body id="top" class="class">
-<nav id="metadata">
-  <nav id="home-section" class="section">
-  <h3 class="section-header">
-    <a href="../../index.html">Home</a>
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
     <a href="../../table_of_contents.html#classes">Classes</a>
     <a href="../../table_of_contents.html#methods">Methods</a>
-  </h3>
-</nav>
+  </div>
+</div>
 
-
-  <nav id="search-section" class="section project-section" class="initially-hidden">
+    <div id="search-section" role="search" class="project-section initially-hidden">
   <form action="#" method="get" accept-charset="utf-8">
-    <h3 class="section-header">
-      <input type="text" name="search" placeholder="Search" id="search-field"
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
              title="Type to search, Up and Down to navigate, Enter to load">
-    </h3>
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
   </form>
+</div>
 
-  <ul id="search-results" class="initially-hidden"></ul>
-</nav>
-
+  </div>
 
   
-
-  <div id="file-metadata">
-    <nav id="file-list-section" class="section">
-  <h3 class="section-header">Defined In</h3>
-  <ul>
-    <li>app/controllers/api/v1/books_controller.rb
-  </ul>
-</nav>
-
-    
-  </div>
 
   <div id="class-metadata">
     
-    <nav id="parent-class-section" class="section">
-  <h3 class="section-header">Parent</h3>
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
   
   <p class="link"><a href="../../ApplicationController.html">ApplicationController</a>
   
-</nav>
+</div>
 
     
     
     <!-- Method Quickref -->
-<nav id="method-list-section" class="section">
-  <h3 class="section-header">Methods</h3>
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
 
-  <ul class="link-list">
+  <ul class="link-list" role="directory">
     
     <li ><a href="#method-i-create">#create</a>
     
@@ -88,156 +85,19 @@
     <li ><a href="#method-i-update">#update</a>
     
   </ul>
-</nav>
-
-  </div>
-
-  <div id="project-metadata">
-    <nav id="fileindex-section" class="section project-section">
-  <h3 class="section-header">Pages</h3>
-
-  <ul>
-  
-    <li class="file"><a href="../../Gemfile.html">Gemfile</a>
-  
-    <li class="file"><a href="../../Gemfile_lock.html">Gemfile.lock</a>
-  
-    <li class="file"><a href="../../README_rdoc.html">README</a>
-  
-    <li class="file"><a href="../../Rakefile.html">Rakefile</a>
-  
-    <li class="file"><a href="../../app/assets/javascripts/application_js.html">application.js</a>
-  
-    <li class="file"><a href="../../app/assets/stylesheets/application_css.html">application.css</a>
-  
-    <li class="file"><a href="../../config_ru.html">config.ru</a>
-  
-    <li class="file"><a href="../../doc/created_rid.html">created.rid</a>
-  
-    <li class="file"><a href="../../log/development_log.html">development.log</a>
-  
-    <li class="file"><a href="../../public/404_html.html">404.html</a>
-  
-    <li class="file"><a href="../../public/422_html.html">422.html</a>
-  
-    <li class="file"><a href="../../public/500_html.html">500.html</a>
-  
-    <li class="file"><a href="../../public/favicon_ico.html">favicon.ico</a>
-  
-    <li class="file"><a href="../../public/robots_txt.html">robots</a>
-  
-    <li class="file"><a href="../../tmp/pids/server_pid.html">server.pid</a>
-  
-  </ul>
-</nav>
-
-    <nav id="classindex-section" class="section project-section">
-  <h3 class="section-header">Class and Module Index</h3>
-
-  <ul class="link-list">
-  
-    <li><a href="../../ActiveRecord.html">ActiveRecord</a>
-  
-    <li><a href="../../ActiveSupport.html">ActiveSupport</a>
-  
-    <li><a href="../../ActiveSupport/TestCase.html">ActiveSupport::TestCase</a>
-  
-    <li><a href="../../AddDateAndHoursToBookAvailabilitiesTable.html">AddDateAndHoursToBookAvailabilitiesTable</a>
-  
-    <li><a href="../../AddDetailsToUsersBooks.html">AddDetailsToUsersBooks</a>
-  
-    <li><a href="../../AddKarmaToUsersTable.html">AddKarmaToUsersTable</a>
-  
-    <li><a href="../../Api.html">Api</a>
-  
-    <li><a href="../../Api/V1.html">Api::V1</a>
-  
-    <li><a href="../../Api/V1/BooksController.html">Api::V1::BooksController</a>
-  
-    <li><a href="../../Api/V1/CategoriesController.html">Api::V1::CategoriesController</a>
-  
-    <li><a href="../../Api/V1/SchoolsController.html">Api::V1::SchoolsController</a>
-  
-    <li><a href="../../Api/V1/UsersBooksController.html">Api::V1::UsersBooksController</a>
-  
-    <li><a href="../../Api/V1/UsersController.html">Api::V1::UsersController</a>
-  
-    <li><a href="../../ApplicationController.html">ApplicationController</a>
-  
-    <li><a href="../../ApplicationHelper.html">ApplicationHelper</a>
-  
-    <li><a href="../../Book.html">Book</a>
-  
-    <li><a href="../../BookAvailability.html">BookAvailability</a>
-  
-    <li><a href="../../BookTest.html">BookTest</a>
-  
-    <li><a href="../../Category.html">Category</a>
-  
-    <li><a href="../../CategoryTest.html">CategoryTest</a>
-  
-    <li><a href="../../CreateBookAvailability.html">CreateBookAvailability</a>
-  
-    <li><a href="../../CreateBooks.html">CreateBooks</a>
-  
-    <li><a href="../../CreateCategories.html">CreateCategories</a>
-  
-    <li><a href="../../CreateRentUserBook.html">CreateRentUserBook</a>
-  
-    <li><a href="../../CreateSchools.html">CreateSchools</a>
-  
-    <li><a href="../../CreateUser.html">CreateUser</a>
-  
-    <li><a href="../../CreateUserBook.html">CreateUserBook</a>
-  
-    <li><a href="../../FixBooksUserIdColumn.html">FixBooksUserIdColumn</a>
-  
-    <li><a href="../../FixRenteeIdColName.html">FixRenteeIdColName</a>
-  
-    <li><a href="../../Logger.html">Logger</a>
-  
-    <li><a href="../../Nhacks16Web.html">Nhacks16Web</a>
-  
-    <li><a href="../../Nhacks16Web/Application.html">Nhacks16Web::Application</a>
-  
-    <li><a href="../../Object.html">Object</a>
-  
-    <li><a href="../../RemoveAvailabilityIdFromUsersBooksTable.html">RemoveAvailabilityIdFromUsersBooksTable</a>
-  
-    <li><a href="../../RemoveDateTimesFromBookAvailabilitiesTable.html">RemoveDateTimesFromBookAvailabilitiesTable</a>
-  
-    <li><a href="../../RemoveDateTimesFromBooks.html">RemoveDateTimesFromBooks</a>
-  
-    <li><a href="../../RemoveDateTimesFromCategories.html">RemoveDateTimesFromCategories</a>
-  
-    <li><a href="../../RemoveDateTimesFromSchools.html">RemoveDateTimesFromSchools</a>
-  
-    <li><a href="../../RenameUserBooksToUsersBooks.html">RenameUserBooksToUsersBooks</a>
-  
-    <li><a href="../../RentUserBook.html">RentUserBook</a>
-  
-    <li><a href="../../School.html">School</a>
-  
-    <li><a href="../../SchoolTest.html">SchoolTest</a>
-  
-    <li><a href="../../User.html">User</a>
-  
-    <li><a href="../../UsersBook.html">UsersBook</a>
-  
-    <li><a href="../../UsersBookTest.html">UsersBookTest</a>
-  
-  </ul>
-</nav>
+</div>
 
   </div>
 </nav>
 
-<div id="documentation">
-  <h1 class="class">class Api::V1::BooksController</h1>
+<main role="main" aria-labelledby="class-Api::V1::BooksController">
+  <h1 id="class-Api::V1::BooksController" class="class">
+    class Api::V1::BooksController
+  </h1>
 
-  <div id="description" class="description">
+  <section class="description">
     
-  </div><!-- description -->
+  </section>
 
   
   
@@ -251,10 +111,11 @@
 
     
 
-    <!-- Methods -->
     
-     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Public Instance Methods</h3>
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
 
     
       <div id="method-i-create" class="method-detail ">
@@ -272,15 +133,14 @@
           
           <p>Returns a status if successful</p>
 
-<pre class="ruby"><span class="ruby-operator">*</span><span class="ruby-constant">Args</span><span class="ruby-operator">*</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-operator">+</span><span class="ruby-identifier">category_name</span><span class="ruby-operator">+</span> <span class="ruby-operator">-</span><span class="ruby-operator">&gt;</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">category</span> <span class="ruby-identifier">name</span> <span class="ruby-identifier">of</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">book</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-operator">+</span><span class="ruby-identifier">facebook_id</span><span class="ruby-operator">+</span> <span class="ruby-operator">-</span><span class="ruby-operator">&gt;</span> <span class="ruby-identifier">facebook</span> <span class="ruby-constant">ID</span> <span class="ruby-identifier">of</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">user</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-operator">+</span><span class="ruby-identifier">name</span><span class="ruby-operator">+</span> <span class="ruby-operator">-</span><span class="ruby-operator">&gt;</span> <span class="ruby-identifier">name</span> <span class="ruby-identifier">of</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">book</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-operator">+</span><span class="ruby-identifier">edition</span><span class="ruby-operator">+</span> <span class="ruby-operator">-</span><span class="ruby-operator">&gt;</span> <span class="ruby-identifier">edition</span> <span class="ruby-identifier">of</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">book</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-operator">+</span><span class="ruby-identifier">price_per_hour</span><span class="ruby-operator">+</span> <span class="ruby-operator">-</span><span class="ruby-operator">&gt;</span> <span class="ruby-identifier">price</span> <span class="ruby-identifier">per</span> <span class="ruby-identifier">hour</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">book</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-operator">+</span><span class="ruby-identifier">book_availabilities</span><span class="ruby-operator">+</span> <span class="ruby-operator">-</span><span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an</span> <span class="ruby-identifier">array</span> <span class="ruby-identifier">of</span> <span class="ruby-constant">JSON</span> <span class="ruby-identifier">with</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">book_availability</span> <span class="ruby-identifier">times</span> <span class="ruby-identifier">as</span> <span class="ruby-identifier">follows</span><span class="ruby-operator">:</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-operator">-</span><span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;book_availabilities&quot;</span><span class="ruby-operator">:</span> [{<span class="ruby-identifier">date</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;2012-02-02&quot;</span>, <span class="ruby-identifier">hours</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;2,4,5,7&quot;</span>}, {<span class="ruby-identifier">date</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;2012-02-23&quot;</span>, <span class="ruby-identifier">hours</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;3,4,6,7&quot;</span>}]
-</pre>
+<pre>*Args*
+=&gt; +category_name+ -&gt; the category name of the book
+=&gt; +facebook_id+ -&gt; facebook ID of the user
+=&gt; +name+ -&gt; name of the book
+=&gt; +edition+ -&gt; edition of the book
+=&gt; +price_per_hour+ -&gt; price per hour for the book
+=&gt; +book_availabilities+ -&gt; an array of JSON with the book_availability times as follows:
+=&gt; -&gt; &quot;book_availabilities&quot;: [{date: &quot;2012-02-02&quot;, hours: &quot;2,4,5,7&quot;}, {date: &quot;2012-02-23&quot;, hours: &quot;3,4,6,7&quot;}]</pre>
           
           
 
@@ -288,8 +148,15 @@
           <div class="method-source-code" id="create-source">
             <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 22</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
-      <span class="ruby-identifier">new_book_category</span> = <span class="ruby-constant">Category</span>.<span class="ruby-identifier">findBy</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:category_name</span>])
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Category</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:categoryName</span>]).<span class="ruby-identifier">present?</span>
+      <span class="ruby-identifier">new_book</span>.<span class="ruby-identifier">category_id</span> = <span class="ruby-constant">Category</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:categoryName</span>]).<span class="ruby-identifier">id</span>
+  <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">new_book_category</span> = <span class="ruby-constant">Category</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-identifier">new_book_category</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:categoryName</span>]
+      <span class="ruby-identifier">new_book_category</span>.<span class="ruby-identifier">save</span>
       <span class="ruby-identifier">new_book</span>.<span class="ruby-identifier">category_id</span> = <span class="ruby-identifier">new_book_category</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-keyword">end</span>
+
   <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">findBy</span>(<span class="ruby-identifier">facebook_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:facebook_id</span>])
   <span class="ruby-identifier">book</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">books</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>], <span class="ruby-identifier">edition</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:edition</span>], <span class="ruby-identifier">category_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">new_book_category</span>.<span class="ruby-identifier">id</span>)
       <span class="ruby-identifier">user_books</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">user_books</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">book_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">book</span>.<span class="ruby-identifier">id</span>)
@@ -306,14 +173,14 @@
 
   <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;success&quot;</span>}
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- create-source -->
+          </div>
           
         </div>
 
         
 
         
-      </div><!-- create-method -->
+      </div>
 
     
       <div id="method-i-destroy" class="method-detail ">
@@ -335,20 +202,20 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 60</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 67</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
        <span class="ruby-identifier">del_entry</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
        <span class="ruby-identifier">del_entry</span>.<span class="ruby-identifier">destroy</span>
        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;success&quot;</span>}
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- destroy-source -->
+          </div>
           
         </div>
 
         
 
         
-      </div><!-- destroy-method -->
+      </div>
 
     
       <div id="method-i-edit" class="method-detail ">
@@ -370,18 +237,18 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 46</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 53</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
 
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- edit-source -->
+          </div>
           
         </div>
 
         
 
         
-      </div><!-- edit-method -->
+      </div>
 
     
       <div id="method-i-index" class="method-detail ">
@@ -408,14 +275,14 @@
       <span class="ruby-identifier">book_list</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">all</span>
       <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-identifier">book_list</span>
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- index-source -->
+          </div>
           
         </div>
 
         
 
         
-      </div><!-- index-method -->
+      </div>
 
     
       <div id="method-i-new" class="method-detail ">
@@ -441,14 +308,14 @@
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
 
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- new-source -->
+          </div>
           
         </div>
 
         
 
         
-      </div><!-- new-method -->
+      </div>
 
     
       <div id="method-i-show" class="method-detail ">
@@ -470,18 +337,18 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 42</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 49</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
       <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-constant">Book</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- show-source -->
+          </div>
           
         </div>
 
         
 
         
-      </div><!-- show-method -->
+      </div>
 
     
       <div id="method-i-update" class="method-detail ">
@@ -503,7 +370,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 50</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/books_controller.rb, line 57</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
        <span class="ruby-identifier">selected_book</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
        <span class="ruby-identifier">selected_book</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>]
@@ -513,26 +380,25 @@
        <span class="ruby-identifier">selected_book</span>.<span class="ruby-identifier">save</span>
        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;success&quot;</span>}
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- update-source -->
+          </div>
           
         </div>
 
         
 
         
-      </div><!-- update-method -->
+      </div>
 
     
-    </section><!-- public-instance-method-details -->
+    </section>
   
-  </section><!-- 5Buntitled-5D -->
+  </section>
+</main>
 
-</div><!-- documentation -->
 
-
-<footer id="validator-badges">
-  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
-  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>class RemoveDateTimesFromBooks - RDoc Documentation</title>
+<title>class ModifyNameDataTypeInCategories - RDoc Documentation</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
@@ -78,9 +78,9 @@
   </div>
 </nav>
 
-<main role="main" aria-labelledby="class-RemoveDateTimesFromBooks">
-  <h1 id="class-RemoveDateTimesFromBooks" class="class">
-    class RemoveDateTimesFromBooks
+<main role="main" aria-labelledby="class-ModifyNameDataTypeInCategories">
+  <h1 id="class-ModifyNameDataTypeInCategories" class="class">
+    class ModifyNameDataTypeInCategories
   </h1>
 
   <section class="description">
@@ -125,10 +125,9 @@
 
           
           <div class="method-source-code" id="change-source">
-            <pre><span class="ruby-comment"># File db/migrate/20160312183524_remove_date_times_from_books.rb, line 2</span>
+            <pre><span class="ruby-comment"># File db/migrate/20160313010430_modify_name_data_type_in_categories.rb, line 2</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">change</span>
-  <span class="ruby-identifier">remove_column</span> <span class="ruby-value">:books</span>, <span class="ruby-value">:created_at</span>
-      <span class="ruby-identifier">remove_column</span> <span class="ruby-value">:books</span>, <span class="ruby-value">:updated_at</span>
+      <span class="ruby-identifier">change_column</span> <span class="ruby-value">:categories</span>, <span class="ruby-value">:name</span>, <span class="ruby-value">:string</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           

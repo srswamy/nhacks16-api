@@ -2,230 +2,90 @@
 
 <html>
 <head>
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta charset="UTF-8">
 
 <title>class FixRenteeIdColName - RDoc Documentation</title>
-
-<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
 </script>
 
-<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
 
 
-<body id="top" class="class">
-<nav id="metadata">
-  <nav id="home-section" class="section">
-  <h3 class="section-header">
-    <a href="./index.html">Home</a>
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
     <a href="./table_of_contents.html#classes">Classes</a>
     <a href="./table_of_contents.html#methods">Methods</a>
-  </h3>
-</nav>
+  </div>
+</div>
 
-
-  <nav id="search-section" class="section project-section" class="initially-hidden">
+    <div id="search-section" role="search" class="project-section initially-hidden">
   <form action="#" method="get" accept-charset="utf-8">
-    <h3 class="section-header">
-      <input type="text" name="search" placeholder="Search" id="search-field"
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
              title="Type to search, Up and Down to navigate, Enter to load">
-    </h3>
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
   </form>
+</div>
 
-  <ul id="search-results" class="initially-hidden"></ul>
-</nav>
-
+  </div>
 
   
-
-  <div id="file-metadata">
-    <nav id="file-list-section" class="section">
-  <h3 class="section-header">Defined In</h3>
-  <ul>
-    <li>db/migrate/20160312095105_fix_rentee_id_col_name.rb
-  </ul>
-</nav>
-
-    
-  </div>
 
   <div id="class-metadata">
     
-    <nav id="parent-class-section" class="section">
-  <h3 class="section-header">Parent</h3>
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
   
   <p class="link">ActiveRecord::Migration
   
-</nav>
+</div>
 
     
     
     <!-- Method Quickref -->
-<nav id="method-list-section" class="section">
-  <h3 class="section-header">Methods</h3>
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
 
-  <ul class="link-list">
+  <ul class="link-list" role="directory">
     
     <li ><a href="#method-i-change">#change</a>
     
   </ul>
-</nav>
-
-  </div>
-
-  <div id="project-metadata">
-    <nav id="fileindex-section" class="section project-section">
-  <h3 class="section-header">Pages</h3>
-
-  <ul>
-  
-    <li class="file"><a href="./Gemfile.html">Gemfile</a>
-  
-    <li class="file"><a href="./Gemfile_lock.html">Gemfile.lock</a>
-  
-    <li class="file"><a href="./README_rdoc.html">README</a>
-  
-    <li class="file"><a href="./Rakefile.html">Rakefile</a>
-  
-    <li class="file"><a href="./app/assets/javascripts/application_js.html">application.js</a>
-  
-    <li class="file"><a href="./app/assets/stylesheets/application_css.html">application.css</a>
-  
-    <li class="file"><a href="./config_ru.html">config.ru</a>
-  
-    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
-  
-    <li class="file"><a href="./log/development_log.html">development.log</a>
-  
-    <li class="file"><a href="./public/404_html.html">404.html</a>
-  
-    <li class="file"><a href="./public/422_html.html">422.html</a>
-  
-    <li class="file"><a href="./public/500_html.html">500.html</a>
-  
-    <li class="file"><a href="./public/favicon_ico.html">favicon.ico</a>
-  
-    <li class="file"><a href="./public/robots_txt.html">robots</a>
-  
-    <li class="file"><a href="./tmp/pids/server_pid.html">server.pid</a>
-  
-  </ul>
-</nav>
-
-    <nav id="classindex-section" class="section project-section">
-  <h3 class="section-header">Class and Module Index</h3>
-
-  <ul class="link-list">
-  
-    <li><a href="./ActiveRecord.html">ActiveRecord</a>
-  
-    <li><a href="./ActiveSupport.html">ActiveSupport</a>
-  
-    <li><a href="./ActiveSupport/TestCase.html">ActiveSupport::TestCase</a>
-  
-    <li><a href="./AddDateAndHoursToBookAvailabilitiesTable.html">AddDateAndHoursToBookAvailabilitiesTable</a>
-  
-    <li><a href="./AddDetailsToUsersBooks.html">AddDetailsToUsersBooks</a>
-  
-    <li><a href="./AddKarmaToUsersTable.html">AddKarmaToUsersTable</a>
-  
-    <li><a href="./Api.html">Api</a>
-  
-    <li><a href="./Api/V1.html">Api::V1</a>
-  
-    <li><a href="./Api/V1/BooksController.html">Api::V1::BooksController</a>
-  
-    <li><a href="./Api/V1/CategoriesController.html">Api::V1::CategoriesController</a>
-  
-    <li><a href="./Api/V1/SchoolsController.html">Api::V1::SchoolsController</a>
-  
-    <li><a href="./Api/V1/UsersBooksController.html">Api::V1::UsersBooksController</a>
-  
-    <li><a href="./Api/V1/UsersController.html">Api::V1::UsersController</a>
-  
-    <li><a href="./ApplicationController.html">ApplicationController</a>
-  
-    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
-  
-    <li><a href="./Book.html">Book</a>
-  
-    <li><a href="./BookAvailability.html">BookAvailability</a>
-  
-    <li><a href="./BookTest.html">BookTest</a>
-  
-    <li><a href="./Category.html">Category</a>
-  
-    <li><a href="./CategoryTest.html">CategoryTest</a>
-  
-    <li><a href="./CreateBookAvailability.html">CreateBookAvailability</a>
-  
-    <li><a href="./CreateBooks.html">CreateBooks</a>
-  
-    <li><a href="./CreateCategories.html">CreateCategories</a>
-  
-    <li><a href="./CreateRentUserBook.html">CreateRentUserBook</a>
-  
-    <li><a href="./CreateSchools.html">CreateSchools</a>
-  
-    <li><a href="./CreateUser.html">CreateUser</a>
-  
-    <li><a href="./CreateUserBook.html">CreateUserBook</a>
-  
-    <li><a href="./FixBooksUserIdColumn.html">FixBooksUserIdColumn</a>
-  
-    <li><a href="./FixRenteeIdColName.html">FixRenteeIdColName</a>
-  
-    <li><a href="./Logger.html">Logger</a>
-  
-    <li><a href="./Nhacks16Web.html">Nhacks16Web</a>
-  
-    <li><a href="./Nhacks16Web/Application.html">Nhacks16Web::Application</a>
-  
-    <li><a href="./Object.html">Object</a>
-  
-    <li><a href="./RemoveAvailabilityIdFromUsersBooksTable.html">RemoveAvailabilityIdFromUsersBooksTable</a>
-  
-    <li><a href="./RemoveDateTimesFromBookAvailabilitiesTable.html">RemoveDateTimesFromBookAvailabilitiesTable</a>
-  
-    <li><a href="./RemoveDateTimesFromBooks.html">RemoveDateTimesFromBooks</a>
-  
-    <li><a href="./RemoveDateTimesFromCategories.html">RemoveDateTimesFromCategories</a>
-  
-    <li><a href="./RemoveDateTimesFromSchools.html">RemoveDateTimesFromSchools</a>
-  
-    <li><a href="./RenameUserBooksToUsersBooks.html">RenameUserBooksToUsersBooks</a>
-  
-    <li><a href="./RentUserBook.html">RentUserBook</a>
-  
-    <li><a href="./School.html">School</a>
-  
-    <li><a href="./SchoolTest.html">SchoolTest</a>
-  
-    <li><a href="./User.html">User</a>
-  
-    <li><a href="./UsersBook.html">UsersBook</a>
-  
-    <li><a href="./UsersBookTest.html">UsersBookTest</a>
-  
-  </ul>
-</nav>
+</div>
 
   </div>
 </nav>
 
-<div id="documentation">
-  <h1 class="class">class FixRenteeIdColName</h1>
+<main role="main" aria-labelledby="class-FixRenteeIdColName">
+  <h1 id="class-FixRenteeIdColName" class="class">
+    class FixRenteeIdColName
+  </h1>
 
-  <div id="description" class="description">
+  <section class="description">
     
-  </div><!-- description -->
+  </section>
 
   
   
@@ -239,10 +99,11 @@
 
     
 
-    <!-- Methods -->
     
-     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Public Instance Methods</h3>
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
 
     
       <div id="method-i-change" class="method-detail ">
@@ -268,26 +129,25 @@
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">change</span>
   <span class="ruby-identifier">rename_column</span> <span class="ruby-value">:rent_user_books</span>, <span class="ruby-value">:rentee_id</span>, <span class="ruby-value">:user_id</span>
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- change-source -->
+          </div>
           
         </div>
 
         
 
         
-      </div><!-- change-method -->
+      </div>
 
     
-    </section><!-- public-instance-method-details -->
+    </section>
   
-  </section><!-- 5Buntitled-5D -->
+  </section>
+</main>
 
-</div><!-- documentation -->
 
-
-<footer id="validator-badges">
-  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
-  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 
