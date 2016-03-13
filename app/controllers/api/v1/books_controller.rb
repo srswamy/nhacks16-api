@@ -71,9 +71,9 @@ skip_before_filter :verify_authenticity_token
 
 
   #=Endpoint: http://localhost:3000/api/v1/books/available
-  #=Parameters:
-  #==user_id
-  #=Returns
+  #==Parameters:
+  #user_id
+  #==Returns
   #An array of available books, along with the user_book_id
   #The user_book_id is required to retrieve a particular user-book combination
   #=={"available_books":[{"book":{"id":4,"name":"testt","category_id":1,"edition":5},"user_book_id":3}]}
@@ -87,6 +87,7 @@ skip_before_filter :verify_authenticity_token
       user_book_id = users_book.id
       json_obj["book"] = book
       json_obj["user_book_id"] = user_book_id
+      json_obj["price"] = users_book.price_per_hour
       json_array.push(json_obj)
     end
 
