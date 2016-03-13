@@ -16,7 +16,7 @@ skip_before_filter :verify_authenticity_token
   	new_user.facebook_id = params[:facebook_id]
   	new_user.email = params[:email]
 	if School.where(:name => params[:school]).present?
-		new_user.school_id = School.find_by(name: params[:school])
+		new_user.school_id = School.find_by(name: params[:school]).id
 	else 
 		new_user_school = School.new
 		new_user_school.name = params[:school]

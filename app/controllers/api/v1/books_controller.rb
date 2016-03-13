@@ -13,8 +13,14 @@ skip_before_filter :verify_authenticity_token
   def create
     new_book = Book.new
   	new_book.name = params[:name]
-  	new_book_category = Category.findBy(name: params[:categoryName])
-  	new_book.category_id = new_book_category.id
+    if Category.where(:name => params[:categoryName]).present?
+        new_book.category_id = Category.find_by(name: params[:categoryName]).id
+    else
+        new_book_category = Category.new
+        new_book_category.name = params[:categoryName]
+        new_book_category.save
+        new_book.category_id = new_book_category.id
+    end
   	new_book.edition = params[:edition]
   	new_book.save
   	render :json => {:status => "success"}
