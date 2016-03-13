@@ -14,7 +14,7 @@ skip_before_filter :verify_authenticity_token
     new_user_book = UsersBook.new
   	new_user_book.user_id = params[:user_id]
 
-    if Book.where(name: => params[:book_name]).present?
+    if Book.where(name: params[:book_name]).present?
       selected_book = Book.find(name: params[:book_name])
   	  new_user_book.book_id = selected_book.id
     else
@@ -108,6 +108,18 @@ skip_before_filter :verify_authenticity_token
   	 update_book_availability.end_availability = params[:end]
 
   	 render :json => {:status => "success"}
+  end
+
+  #Endpoint: http://localhost:3000/api/v1/users/books/owner
+  #=Parameters
+  #==users_book_id
+  #=Returns
+  #==A user row
+  #{"book_owner":{"id":1,"name":"NV","facebook_id":"10","email":"envybhargava26@gmail.com","school_id":1,"karma":null}}
+  def get_book_owner
+    book = UsersBook.find(params[:users_book_id])
+
+    render :json => {:book_owner => book.user}
   end
 
 
