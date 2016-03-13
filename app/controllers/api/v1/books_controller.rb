@@ -88,7 +88,7 @@ skip_before_filter :verify_authenticity_token
       json_obj["book"] = book
       json_obj["user_book_id"] = user_book_id
       json_obj["price"] = users_book.price_per_hour
-      json["rented_count"] = users_book.rent_user_books.count
+      json_obj["rented_count"] = users_book.rent_user_books.count
       json_array.push(json_obj)
     end
 
