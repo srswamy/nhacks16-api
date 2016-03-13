@@ -54,15 +54,15 @@ skip_before_filter :verify_authenticity_token
   end
 
 
-  #Takes in a facebook ID as an argument and returns all the lent books, with their status
+  #Takes in a user ID as an argument and returns all the lent books, with their status
   #(0 being not currently available, and 1 being currently available)
   #*Args*
-  #facebook_id -> facebook_id of the user
+  #user_id -> user_id of the user
   #*Returns*
   #=books -> a JSON array of the lent books
   #=={"books":[{"current_status":0,"book":{"id":1,"name":"Introduction to databases","category_id":1,"edition":4}},{"current_status":0,"book":{"id":1,"name":"Introduction to databases","category_id":1,"edition":4}},{"current_status":1,"book":{"id":2,"name":"Intro to something","category_id":1,"edition":2}}]}
   def get_lent_books
-    user = User.find_by(facebook_id: params[:user_id])
+    user = User.find(params[:user_id])
     book_availabilities = user.book_availabilities
     json_array = Array.new
     book_availabilities.each do |availability|
@@ -74,7 +74,26 @@ skip_before_filter :verify_authenticity_token
       json_array.push(current_json_obj)
     end
 
-    render :json => {:books => JSON.generate(json_array)}
+    render :json => {:books => json_array}
+  end
+
+  #Takes in a user ID as an argument and returns all the books that are borrowed by that user
+  #*Args*
+  #user_id -> user_id of the user
+  #*Returns*
+  #=books -> a JSON array of the borrowed books
+  #=={"books":[{"id":1,"name":"Introduction to databases","category_id":1,"edition":4}]}
+  def borrowed
+    user = User.find(params[:user_id])
+    rent_user_books = user.rent_user_books
+    json_array = Array.new
+
+    rent_user_books.each do |rent_user_book|
+      book = rent_user_book.book
+      json_array.push(book)
+    end
+
+    render :json => {:books => json_array}
   end
 
 

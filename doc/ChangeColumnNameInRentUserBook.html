@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>module ActiveRecord - RDoc Documentation</title>
+<title>class ChangeColumnNameInRentUserBook - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body id="top" class="module">
+<body id="top" class="class">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -49,7 +49,7 @@
     <nav id="file-list-section" class="section">
   <h3 class="section-header">Defined In</h3>
   <ul>
-    <li>db/schema.rb
+    <li>db/migrate/20160313042249_change_column_name_in_rent_user_book.rb
   </ul>
 </nav>
 
@@ -58,10 +58,26 @@
 
   <div id="class-metadata">
     
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Migration
+  
+</nav>
+
     
     
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
     
+    <li ><a href="#method-i-change">#change</a>
     
+  </ul>
+</nav>
+
   </div>
 
   <div id="project-metadata">
@@ -497,7 +513,7 @@
 </nav>
 
 <div id="documentation">
-  <h1 class="module">module ActiveRecord</h1>
+  <h1 class="class">class ChangeColumnNameInRentUserBook</h1>
 
   <div id="description" class="description">
     
@@ -517,6 +533,45 @@
 
     <!-- Methods -->
     
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-change" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">change</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="change-source">
+            <pre><span class="ruby-comment"># File db/migrate/20160313042249_change_column_name_in_rent_user_book.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">change</span>
+      <span class="ruby-identifier">rename_column</span> <span class="ruby-value">:rent_user_books</span>, <span class="ruby-value">:user_book_id</span>, <span class="ruby-value">:users_book_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- change-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- change-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
   </section><!-- 5Buntitled-5D -->
 
 </div><!-- documentation -->
