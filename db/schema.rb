@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160313010430) do
+ActiveRecord::Schema.define(version: 20160313015412) do
 
   create_table "book_availabilities", force: :cascade do |t|
-    t.integer  "users_book_id",      limit: 4
-    t.datetime "start_availability"
-    t.datetime "end_availability"
+    t.integer "users_book_id", limit: 4
+    t.date    "date"
+    t.string  "hours",         limit: 255
   end
 
   create_table "books", force: :cascade do |t|
@@ -50,13 +50,12 @@ ActiveRecord::Schema.define(version: 20160313010430) do
   end
 
   create_table "users_books", force: :cascade do |t|
-    t.integer "user_id",              limit: 4
-    t.integer "book_id",              limit: 4
+    t.integer "user_id",        limit: 4
+    t.integer "book_id",        limit: 4
     t.boolean "status"
-    t.integer "book_availability_id", limit: 4
     t.boolean "sent"
     t.boolean "returned"
-    t.decimal "price_per_hour",                 precision: 10
+    t.decimal "price_per_hour",           precision: 10
   end
 
 end

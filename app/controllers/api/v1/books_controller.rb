@@ -10,9 +10,16 @@ skip_before_filter :verify_authenticity_token
 
   end
 
+  #Returns a status if successful
+  # *Args*
+  # => +category_name+ -> the category name of the book
+  # => +facebook_id+ -> facebook ID of the user
+  # => +name+ -> name of the book
+  # => +edition+ -> edition of the book
+  # => +price_per_hour+ -> price per hour for the book
+  # => +book_availabilities+ -> an array of JSON with the book_availability times as follows:
+  # => -> "book_availabilities": [{date: "2012-02-02", hours: "2,4,5,7"}, {date: "2012-02-23", hours: "3,4,6,7"}]
   def create
-    new_book = Book.new
-  	new_book.name = params[:name]
     if Category.where(:name => params[:categoryName]).present?
         new_book.category_id = Category.find_by(name: params[:categoryName]).id
     else
@@ -21,9 +28,22 @@ skip_before_filter :verify_authenticity_token
         new_book_category.save
         new_book.category_id = new_book_category.id
     end
-  	new_book.edition = params[:edition]
-  	new_book.save
-  	render :json => {:status => "success"}
+
+    user = User.findBy(facebook_id: params[:facebook_id])
+    book = user.books.create(name: params[:name], edition: params[:edition], category_id: new_book_category.id)
+  	user_books = user.user_books.where(book_id: book.id)
+    user_books.status = 1
+    user_books.sent = 0
+    user_books.returned = 0
+    user_books.price_per_hour = params[:price_per_hour]
+
+    #Add the book availabilities now
+    book_availabilities_array = JSON.parse(params[:book_availabilities])
+    book_availabilities_array.each do |book_availability|
+      user_books.book_availabilities.create(users_book_id: user_books.id, date: book_availability.date, hours: book_availability.hours)
+    end
+
+    render :json => {:status => "success"}
   end
 
   def show
