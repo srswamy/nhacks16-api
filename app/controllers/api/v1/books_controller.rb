@@ -30,9 +30,9 @@ skip_before_filter :verify_authenticity_token
     end
 
   	user_books = user.users_books.where(book_id: book.id)
-    user_books.status = 1
-    user_books.sent = 0
-    user_books.returned = 0
+    user_books.status = true
+    user_books.sent = false
+    user_books.returned = false
     user_books.price_per_hour = params[:price_per_hour]
     user_books.save
 
