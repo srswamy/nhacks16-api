@@ -8,14 +8,18 @@ Rails.application.routes.draw do
   namespace :api, :defaults => { :format => :json } do
   	namespace :v1 do
 		resources :users do
+      collection do
+          get 'books/owner', to: 'users_books#get_book_owner'
+      end
+
       get 'lent_books', to: 'users#get_lent_books'
       get 'borrowed', to: 'users#borrowed'
 			resources :schools
 			resources :books, :controller => 'users_books' do
-       put 'updateStatus', to: 'users_books#update_status'
-       put 'updateSent', to: 'users_books#update_sent'
-       put 'updateReturn', to: 'users_books#update_sent'
-       put 'updateBookAvailability', to: 'users_books#update_book_availability'
+        put 'updateStatus', to: 'users_books#update_status'
+        put 'updateSent', to: 'users_books#update_sent'
+        put 'updateReturn', to: 'users_books#update_sent'
+        put 'updateBookAvailability', to: 'users_books#update_book_availability'
       end
 		end
 		resources :books, except: :show do 

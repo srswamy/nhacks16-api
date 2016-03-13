@@ -20,7 +20,7 @@ skip_before_filter :verify_authenticity_token
   # => +book_availabilities+ -> an array of JSON with the book_availability times as follows:
   # => -> "book_availabilities": [{date: "2012-02-02", hours: "2,4,5,7"}, {date: "2012-02-23", hours: "3,4,6,7"}]
   def create
-    if Category.where(:name => params[:category_name]).present?
+    if Category.where(name: params[:category_name]).present?
         new_book.category_id = Category.find_by(name: params[:category_name]).id
     else
         new_book_category = Category.new
@@ -75,15 +75,20 @@ skip_before_filter :verify_authenticity_token
   #=Parameters:
   #==user_id
   #=Returns
-  #An array of available books
-  #=={"available_books":[{"id":2,"name":"Intro to something","category_id":1,"edition":2},{"id":4,"name":"testt","category_id":1,"edition":5}]}
+  #An array of available books, along with the user_book_id
+  #The user_book_id is required to retrieve a particular user-book combination
+  #=={"available_books":[{"book":{"id":4,"name":"testt","category_id":1,"edition":5},"user_book_id":3}]}
 
   def get_available_books
     user = User.find(params[:user_id])
     json_array = Array.new
     UsersBook.all.where(status: 1).where.not(user_id: user.id).find_each do |users_book|
+      json_obj = Hash.new
       book = users_book.book
-      json_array.push(book)
+      user_book_id = users_book.id
+      json_obj["book"] = book
+      json_obj["user_book_id"] = user_book_id
+      json_array.push(json_obj)
     end
 
     render :json => {:available_books => json_array}
