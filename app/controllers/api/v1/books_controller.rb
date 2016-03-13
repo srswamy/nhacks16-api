@@ -34,6 +34,7 @@ skip_before_filter :verify_authenticity_token
     user_books.sent = 0
     user_books.returned = 0
     user_books.price_per_hour = params[:price_per_hour]
+    user_books.save
 
     #Add the book availabilities now
     book_availabilities_array = JSON.parse(params[:book_availabilities])
