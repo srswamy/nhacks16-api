@@ -29,7 +29,7 @@ skip_before_filter :verify_authenticity_token
       book = user.books.create(name: params[:name], edition: params[:edition], category_id: new_book_category_id)
     end
 
-  	user_books = user.user_books.where(book_id: book.id)
+  	user_books = user.users_books.where(book_id: book.id)
     user_books.status = 1
     user_books.sent = 0
     user_books.returned = 0
